@@ -1,0 +1,52 @@
+.nav {
+  &__list {
+    background-color: $color-dark-grey;
+    list-style: none;
+    overflow: hidden;
+  }
+
+  &__item {
+    float: left;
+    text-align: center;
+  }
+
+  &__link {
+    display: block;
+    color: $color-white;
+    min-width: 12rem;
+    padding: 1.2rem 2rem;
+    font-size: 1.8rem;
+    letter-spacing: 0.2rem;
+    position: relative;
+    text-decoration: none;
+    transition: background-color 0.2s;
+
+    &::after {
+      background-color: $color-primary;
+      content: "";
+      bottom: 0;
+      height: 0.4rem;
+      left: 0;
+      position: absolute;
+      transition: transform 0.2s 0.2s;
+      transform: scaleX(0);
+      width: 100%;
+    }
+
+    &:hover {
+      background-color: darken($color-dark-grey, 8%);
+
+      &::after {
+        transform: scaleX(1);
+      }
+    }
+
+    &--active {
+      background-color: darken($color-dark-grey, 8%);
+
+      &::after {
+        transform: scaleX(1);
+      }
+    }
+  }
+}
