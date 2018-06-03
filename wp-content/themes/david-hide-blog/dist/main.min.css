@@ -26,6 +26,18 @@ body {
   font-size: 1.6rem;
   line-height: 1.7; }
 
+.heading--primary {
+  font-size: 3.6rem;
+  text-transform: uppercase; }
+
+.heading--secondary {
+  color: #333;
+  font-size: 2.8rem; }
+
+.heading--sub {
+  font-size: 2.2rem;
+  font-weight: 300; }
+
 .u-padding-bottom-large {
   padding-bottom: 8rem; }
 
@@ -38,6 +50,9 @@ body {
 .u-margin-top-small {
   margin-top: 4rem !important; }
 
+.u-margin-top-tiny {
+  margin-top: 2.5rem !important; }
+
 .u-center-text {
   text-align: center !important; }
 
@@ -48,12 +63,27 @@ body {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%); }
 
+.btn {
+  background-color: #3799ff;
+  border: none;
+  border-radius: 0.4rem;
+  color: #fff;
+  margin: 1.4rem 0;
+  padding: 1rem 1.4rem;
+  text-decoration: none;
+  transition: background-color 0.2s; }
+  .btn:hover {
+    background-color: #047fff; }
+
+.link {
+  color: inherit; }
+
 .post__title {
   margin-bottom: 1rem; }
 
 .post__link {
   color: #333;
-  font-size: 2.8rem;
+  font-size: 2.4rem;
   position: relative;
   text-decoration: none;
   text-transform: uppercase; }
