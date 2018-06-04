@@ -105,19 +105,19 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./sass
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nvar _TestModule = __webpack_require__(/*! ./modules/TestModule */ \"./scripts/modules/TestModule.js\");\n\nvar _TestModule2 = _interopRequireDefault(_TestModule);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar testModule = new _TestModule2.default();\n\n//# sourceURL=webpack:///./scripts/app.js?");
+eval("\n\nvar _Navigation = __webpack_require__(/*! ./modules/Navigation */ \"./scripts/modules/Navigation.js\");\n\nvar _Navigation2 = _interopRequireDefault(_Navigation);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar navigation = new _Navigation2.default();\n\n//# sourceURL=webpack:///./scripts/app.js?");
 
 /***/ }),
 
-/***/ "./scripts/modules/TestModule.js":
+/***/ "./scripts/modules/Navigation.js":
 /*!***************************************!*\
-  !*** ./scripts/modules/TestModule.js ***!
+  !*** ./scripts/modules/Navigation.js ***!
   \***************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nvar testModule = function testModule() {\n  console.log(\"from test module\");\n};\n\nexports.default = testModule;\n\n//# sourceURL=webpack:///./scripts/modules/TestModule.js?");
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar Navigation = function () {\n  function Navigation() {\n    _classCallCheck(this, Navigation);\n\n    console.log('TODO: complete navigation module');\n    var toggleBtn = document.querySelector('.nav__toggle-button');\n    toggleBtn.addEventListener('click', this.toggleNav);\n  }\n\n  _createClass(Navigation, [{\n    key: 'toggleNav',\n    value: function toggleNav() {\n      console.log('toggle nav');\n    }\n  }]);\n\n  return Navigation;\n}();\n\nexports.default = Navigation;\n\n//# sourceURL=webpack:///./scripts/modules/Navigation.js?");
 
 /***/ }),
 

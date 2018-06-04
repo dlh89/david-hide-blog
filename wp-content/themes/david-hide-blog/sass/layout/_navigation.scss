@@ -1,4 +1,55 @@
 .nav {
+  &__container {
+    margin: auto;
+    max-width: 96rem;
+  }
+
+  &__toggle-button {
+    background-color: transparent;
+    border: none;
+    display: none;
+    height: 2.4rem;
+    margin: 1.6rem;
+    position: relative;
+    width: 2.4rem;
+
+    @include respond(mobile) {
+      display: block;
+    }
+
+    &::before {
+      background-color: $color-white;
+      content: "";
+      display: block;
+      height: 2px;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+
+    &::after {
+      background-color: $color-white;
+      content: "";
+      display: block;
+      height: 2px;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__burger {
+    background-color: $color-white;
+    height: 2px;
+    position: absolute;
+    transform: translateY(-50%);
+    width: 100%;
+  }
+
   &__list {
     background-color: $color-dark-grey;
     list-style: none;
@@ -8,6 +59,10 @@
   &__item {
     float: left;
     text-align: center;
+
+    @include respond(mobile) {
+      float: none;
+    }
   }
 
   &__link {

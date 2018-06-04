@@ -1,3 +1,3 @@
-import TestModule from './modules/TestModule';
+import Navigation from './modules/Navigation';
 
-const testModule = new TestModule();
+const navigation = new Navigation();
