@@ -1,4 +1,4 @@
-.section-heading {
+.banner {
   background-color: $color-primary;
   background-image: linear-gradient(
     to top,
@@ -7,10 +7,11 @@
   );
   color: $color-white;
   font-size: 2.4rem;
-  min-height: 50vh;
+  min-height: 25vh;
   position: relative;
   text-align: center;
-}
 
-.section-blog-posts {
+  &--large {
+    min-height: 50vh;
+  }
 }

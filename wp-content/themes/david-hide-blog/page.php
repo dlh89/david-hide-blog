@@ -1,17 +1,17 @@
 <?php get_header(); ?>
-<div class="container">
-  <div class="u-margin-top-large">
     <?php 
       if ( have_posts() ) {
         while ( have_posts() ) {
             the_post(); ?>
-            <h2 class="post__title"><a href="<?php the_permalink(); ?>" class="post__link"><?php the_title(); ?></a></h2>
-            <div class="u-margin-top-small">
+            <section class="banner">
+              <h1 class="u-absolute-center"><?php the_title(); ?></h1>
+            </section>
+            <section class="section-main">
+              <div class="container u-margin-top-large">
               <?php the_content(); ?>
-            </div>
+              </div>
+            </section>
         <?php }
       }
     ?>
-  </div>
-</div>
 <?php get_footer(); ?>

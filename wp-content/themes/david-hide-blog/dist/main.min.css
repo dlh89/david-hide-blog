@@ -70,6 +70,17 @@ body {
   height: 1px;
   margin: 3.4rem 0; }
 
+.banner {
+  background-color: #3799ff;
+  background-image: linear-gradient(to top, #3799ff, #0066d0);
+  color: #fff;
+  font-size: 2.4rem;
+  min-height: 25vh;
+  position: relative;
+  text-align: center; }
+  .banner--large {
+    min-height: 50vh; }
+
 .btn {
   background-color: #3799ff;
   border: none;
@@ -175,44 +186,67 @@ body {
   background-color: transparent;
   border: none;
   display: none;
-  height: 2.4rem;
+  height: 2.3rem;
   margin: 1.6rem;
-  position: relative;
-  width: 2.4rem; }
+  position: absolute;
+  width: 2.4rem;
+  z-index: 99; }
   @media (max-width: 37.5em) {
     .nav__toggle-button {
       display: block; } }
   .nav__toggle-button::before {
-    background-color: #fff;
+    background-color: #cccccc;
     content: "";
     display: block;
     height: 2px;
     position: absolute;
     top: 0;
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+    transition: -webkit-transform 0.25s ease;
+    transition: transform 0.25s ease;
+    transition: transform 0.25s ease, -webkit-transform 0.25s ease;
     width: 100%; }
   .nav__toggle-button::after {
-    background-color: #fff;
+    background-color: #cccccc;
     content: "";
     display: block;
     height: 2px;
     position: absolute;
     bottom: 0;
+    -webkit-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+    transition: -webkit-transform 0.25s ease;
+    transition: transform 0.25s ease;
+    transition: transform 0.25s ease, -webkit-transform 0.25s ease;
     width: 100%; }
+  .nav__toggle-button--active::before {
+    -webkit-transform: rotate(45deg) scaleX(1.2);
+            transform: rotate(45deg) scaleX(1.2); }
+  .nav__toggle-button--active::after {
+    -webkit-transform: rotate(-45deg) scaleX(1.2);
+            transform: rotate(-45deg) scaleX(1.2); }
   .nav__toggle-button:hover {
     cursor: pointer; }
 
 .nav__burger {
-  background-color: #fff;
+  background-color: #cccccc;
   height: 2px;
   position: absolute;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   width: 100%; }
+  .nav__burger--active {
+    display: none; }
 
 .nav__list {
   background-color: #333;
   list-style: none;
-  overflow: hidden; }
+  overflow: hidden;
+  transition: max-height 0.25s ease; }
+  @media (max-width: 37.5em) {
+    .nav__list {
+      max-height: 0; } }
 
 .nav__item {
   float: left;
@@ -224,7 +258,7 @@ body {
 .nav__link {
   display: block;
   color: #fff;
-  min-width: 12rem;
+  min-width: 16rem;
   padding: 1.2rem 2rem;
   font-size: 1.8rem;
   letter-spacing: 0.2rem;
@@ -254,13 +288,4 @@ body {
     .nav__link--active::after {
       -webkit-transform: scaleX(1);
               transform: scaleX(1); }
-
-.section-heading {
-  background-color: #3799ff;
-  background-image: linear-gradient(to top, #3799ff, #0066d0);
-  color: #fff;
-  font-size: 2.4rem;
-  min-height: 50vh;
-  position: relative;
-  text-align: center; }
 

@@ -8,33 +8,50 @@
     background-color: transparent;
     border: none;
     display: none;
-    height: 2.4rem;
+    height: 2.3rem;
     margin: 1.6rem;
-    position: relative;
+    position: absolute;
     width: 2.4rem;
+    z-index: 99;
 
     @include respond(mobile) {
       display: block;
     }
 
     &::before {
-      background-color: $color-white;
+      background-color: $color-light-grey;
       content: "";
       display: block;
       height: 2px;
       position: absolute;
       top: 0;
+      transform-origin: 0 0;
+      transition: transform 0.25s ease;
       width: 100%;
     }
 
     &::after {
-      background-color: $color-white;
+      background-color: $color-light-grey;
       content: "";
       display: block;
       height: 2px;
       position: absolute;
       bottom: 0;
+      transform-origin: 0 100%;
+      transition: transform 0.25s ease;
       width: 100%;
+    }
+
+    &--active {
+      &::before {
+        //top: 50%;
+        transform: rotate(45deg) scaleX(1.2);
+      }
+
+      &::after {
+        //top: 50%;
+        transform: rotate(-45deg) scaleX(1.2);
+      }
     }
 
     &:hover {
@@ -43,17 +60,26 @@
   }
 
   &__burger {
-    background-color: $color-white;
+    background-color: $color-light-grey;
     height: 2px;
     position: absolute;
     transform: translateY(-50%);
     width: 100%;
+
+    &--active {
+      display: none;
+    }
   }
 
   &__list {
     background-color: $color-dark-grey;
     list-style: none;
     overflow: hidden;
+    transition: max-height 0.25s ease;
+
+    @include respond(mobile) {
+      max-height: 0;
+    }
   }
 
   &__item {
@@ -68,7 +94,7 @@
   &__link {
     display: block;
     color: $color-white;
-    min-width: 12rem;
+    min-width: 16rem;
     padding: 1.2rem 2rem;
     font-size: 1.8rem;
     letter-spacing: 0.2rem;

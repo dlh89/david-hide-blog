@@ -1,6 +1,9 @@
 <?php get_header(); ?>
 <section class="banner">
-  <h1 class="u-absolute-center">Blog</h1>
+<div class="u-absolute-center"> 
+    <h1 class="heading--primary">Projects</h1>
+    <h2 class="heading--sub">An archive of my projects</h2>
+  </div>
 </section>
 <section>
   <div class="container u-margin-top-large">
@@ -20,3 +23,4 @@
 </section>
 
 <?php get_footer(); ?>
+

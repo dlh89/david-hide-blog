@@ -5,6 +5,7 @@
 @import "./base/typography";
 @import "./base/utilities";
 
+@import "./components/banner";
 @import "./components/button";
 @import "./components/footer";
 @import "./components/post";
@@ -12,5 +13,3 @@
 @import "./layout/container";
 @import "./layout/grid";
 @import "./layout/navigation";
-
-@import "./pages/index";
