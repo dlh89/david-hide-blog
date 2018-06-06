@@ -21,8 +21,13 @@
           <div class="col-1-of-2">
             <div class="u-margin-top-small">
               <h2 class="post__title"><a href="<?php the_permalink(); ?>" class="post__link"><?php the_title(); ?></a></h2>
+              <a href="<?php the_field('project_link') ?>"><?php the_field('project_link') ?></a>
               <h3 class="post__date"><?php the_date(); ?></h3>
-              <p><?php echo wp_trim_words(get_the_content(), 60); ?> <a href="<?php the_permalink(); ?>" class="link">Continue reading &raquo;</a></p>
+              <p><?php if (has_excerpt()) {
+                echo get_the_excerpt();
+              } else {
+                echo wp_trim_words(get_the_content(), 60); 
+              }?> <a href="<?php the_permalink(); ?>" class="link">Continue reading &raquo;</a></p>
             </div>
           </div>
         <?php } wp_reset_postdata();

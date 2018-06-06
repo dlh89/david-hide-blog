@@ -14,7 +14,7 @@
     width: 2.4rem;
     z-index: 99;
 
-    @include respond(mobile) {
+    @include respond(tab-port) {
       display: block;
     }
 
@@ -77,7 +77,7 @@
     overflow: hidden;
     transition: max-height 0.25s ease;
 
-    @include respond(mobile) {
+    @include respond(tab-port) {
       max-height: 0;
     }
   }
@@ -86,7 +86,7 @@
     float: left;
     text-align: center;
 
-    @include respond(mobile) {
+    @include respond(tab-port) {
       float: none;
     }
   }

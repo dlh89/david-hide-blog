@@ -6,11 +6,6 @@
   box-sizing: border-box;
 }
 
-// Change text selection (highlight) colour
-::selection {
-  background: $color-primary;
-}
-
 html {
   font-size: 62.5%;
 
