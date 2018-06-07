@@ -27,7 +27,7 @@
         </div>
       </div>
       <div class="u-margin-top-tiny">
-        <hr class="footer__hr">
+        <hr class="u-hr">
         <p class="u-margin-top-tiny">&#169;2018 David Hide</p>
       </div>
     </div>

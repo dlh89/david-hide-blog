@@ -26,7 +26,8 @@ body {
 
 .heading--secondary {
   color: #333;
-  font-size: 2.8rem; }
+  font-size: 3.2rem;
+  font-weight: 300; }
 
 .heading--sub {
   font-size: 2.2rem;
@@ -57,12 +58,14 @@ body {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%); }
 
-.hr {
-  background-color: #cccccc;
-  background-image: linear-gradient(to right, #fafafa, #cccccc, #fafafa);
+.u-hr {
+  background-image: linear-gradient(to right, transparent, #cccccc, transparent);
   border: none;
   height: 1px;
   margin: 3.4rem 0; }
+  @supports not (background-image: linear-gradient(to right, transparent, #cccccc, transparent)) {
+    .u-hr {
+      background-color: #cccccc; } }
 
 .banner {
   background-color: #3799ff;
@@ -104,11 +107,6 @@ body {
   .footer__heading {
     font-size: 1.8rem;
     font-weight: 800; }
-  .footer__hr {
-    background-color: #cccccc;
-    background-image: linear-gradient(to right, #333, #cccccc, #333);
-    border: none;
-    height: 1px; }
 
 .post__title {
   margin-bottom: 1rem; }
@@ -140,6 +138,17 @@ body {
   font-size: 2rem;
   font-weight: 300;
   margin-bottom: 1rem; }
+
+.technologies__title {
+  font-size: 2.2rem;
+  font-weight: 400;
+  text-transform: uppercase; }
+
+.technologies__list {
+  list-style: none; }
+
+.technologies__item {
+  font-size: 1.4rem; }
 
 .container {
   margin: auto;

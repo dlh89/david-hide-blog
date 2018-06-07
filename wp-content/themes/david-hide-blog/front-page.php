@@ -33,7 +33,7 @@
         <?php } wp_reset_postdata();
       ?>
     </div>
-    <hr class="hr">
+    <hr class="u-hr">
     <h2 class="heading--secondary">Recent Blog Posts</h2>
     <a href="<?php echo site_url('/blog') ?>" class="link">View all posts &#x2192;</a>    
     <div class="row">

@@ -18,16 +18,4 @@
     font-size: 1.8rem;
     font-weight: 800;
   }
-
-  &__hr {
-    background-color: $color-light-grey;
-    background-image: linear-gradient(
-      to right,
-      $color-dark-grey,
-      $color-light-grey,
-      $color-dark-grey
-    );
-    border: none;
-    height: 1px;
-  }
 }

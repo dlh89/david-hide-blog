@@ -1,0 +1,15 @@
+.technologies {
+  &__title {
+    font-size: 2.2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__item {
+    font-size: 1.4rem;
+  }
+}

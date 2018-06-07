@@ -30,13 +30,18 @@
   transform: translate(-50%, -50%);
 }
 
-.hr {
-  background-color: $color-light-grey;
+.u-hr {
+  @supports not (
+    background-image:
+      linear-gradient(to right, transparent, $color-light-grey, transparent)
+  ) {
+    background-color: $color-light-grey;
+  }
   background-image: linear-gradient(
     to right,
-    $color-off-white,
+    transparent,
     $color-light-grey,
-    $color-off-white
+    transparent
   );
   border: none;
   height: 1px;
