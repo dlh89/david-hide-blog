@@ -9,6 +9,8 @@ add_action('wp_enqueue_scripts', 'blog_files');
 
 function blog_features() {
   add_theme_support('title-tag');
+  add_theme_support('post-thumbnails');
+  add_image_size('customThumbnail', 440, 247, true);
 }
 
 add_action('after_setup_theme', 'blog_features');

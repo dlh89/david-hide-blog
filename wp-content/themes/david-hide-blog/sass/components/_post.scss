@@ -10,6 +10,10 @@
     text-decoration: none;
     text-transform: uppercase;
 
+    &:hover > img {
+      opacity: 1;
+    }
+
     &::after {
       background-color: $color-primary;
       bottom: -0.4rem;
@@ -33,5 +37,19 @@
     font-size: 2rem;
     font-weight: 300;
     margin-bottom: 1rem;
+  }
+
+  &__thumbnail {
+    opacity: 0.8;
+    height: auto;
+    max-width: 100%;
+    transition: opacity 0.2s ease-out;
+    width: auto;
+  }
+
+  &__image {
+    max-width: 100%;
+    height: auto;
+    width: auto;
   }
 }
