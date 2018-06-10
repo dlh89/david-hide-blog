@@ -10,7 +10,7 @@
         <div>
           <h2 class="post__title">
             <a href="<?php the_permalink(); ?>" class="post__link">
-              <img src="<?php the_post_thumbnail_url('customThumbnail'); ?>" alt="" class="post__thumbnail"><br>
+              <?php echo get_the_post_thumbnail(get_the_id(), 'customThumbnail', array( 'class' => 'post__thumbnail' )); ?><br>
               <?php the_title(); ?>
             </a>
           </h2>
