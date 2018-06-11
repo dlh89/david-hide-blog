@@ -105,7 +105,7 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./sass
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nvar _Navigation = __webpack_require__(/*! ./modules/Navigation */ \"./scripts/modules/Navigation.js\");\n\nvar _Navigation2 = _interopRequireDefault(_Navigation);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar navigation = new _Navigation2.default();\n\n//# sourceURL=webpack:///./scripts/app.js?");
+eval("\n\nvar _Navigation = __webpack_require__(/*! ./modules/Navigation */ \"./scripts/modules/Navigation.js\");\n\nvar _Navigation2 = _interopRequireDefault(_Navigation);\n\nvar _Search = __webpack_require__(/*! ./modules/Search */ \"./scripts/modules/Search.js\");\n\nvar _Search2 = _interopRequireDefault(_Search);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar navigation = new _Navigation2.default();\nvar search = new _Search2.default();\n\n//# sourceURL=webpack:///./scripts/app.js?");
 
 /***/ }),
 
@@ -118,6 +118,18 @@ eval("\n\nvar _Navigation = __webpack_require__(/*! ./modules/Navigation */ \"./
 
 "use strict";
 eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar Navigation = function () {\n  function Navigation() {\n    _classCallCheck(this, Navigation);\n\n    this.toggleBtn = document.querySelector('.nav__toggle-button');\n    this.burger = document.querySelector('.nav__burger');\n    this.navList = document.querySelector('.nav__list');\n    this.events();\n  }\n\n  _createClass(Navigation, [{\n    key: 'events',\n    value: function events() {\n      this.toggleBtn.addEventListener('click', this.toggleNav.bind(this));\n    }\n  }, {\n    key: 'toggleNav',\n    value: function toggleNav() {\n      this.navbarActive = true;\n      this.burger.classList.toggle('nav__burger--active');\n      this.toggleBtn.classList.toggle('nav__toggle-button--active');\n\n      if (!this.navList.style.maxHeight) {\n        this.navList.style.maxHeight = this.navList.scrollHeight + 'px';\n      } else {\n        this.navList.style.maxHeight = null;\n      }\n    }\n  }]);\n\n  return Navigation;\n}();\n\nexports.default = Navigation;\n\n//# sourceURL=webpack:///./scripts/modules/Navigation.js?");
+
+/***/ }),
+
+/***/ "./scripts/modules/Search.js":
+/*!***********************************!*\
+  !*** ./scripts/modules/Search.js ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar Search = function () {\n  function Search() {\n    _classCallCheck(this, Search);\n\n    console.log('hello from search');\n    this.searchButton = document.querySelector('#searchButton');\n    // this.search = document.querySelector('.search');\n    this.events();\n  }\n\n  _createClass(Search, [{\n    key: 'events',\n    value: function events() {\n      this.searchButton.addEventListener('click', this.activateSearch);\n    }\n  }, {\n    key: 'activateSearch',\n    value: function activateSearch() {\n      console.log(this.search);\n      var search = document.querySelector('.search');\n      search.classList.toggle('search--active');\n      if (!search.style.maxHeight) {\n        search.style.maxHeight = search.scrollHeight + 'px';\n      } else {\n        search.style.maxHeight = null;\n      }\n    }\n  }]);\n\n  return Search;\n}();\n\nexports.default = Search;\n\n//# sourceURL=webpack:///./scripts/modules/Search.js?");
 
 /***/ }),
 

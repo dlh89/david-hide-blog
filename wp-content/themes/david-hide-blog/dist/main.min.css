@@ -181,6 +181,18 @@ body {
 .technologies__item {
   font-size: 1.4rem; }
 
+.search {
+  background-color: #333;
+  max-height: 0;
+  transition: max-height 0.2s ease; }
+  .search--active {
+    display: block; }
+  .search__input {
+    font-family: inherit;
+    font-size: inherit;
+    padding: 1rem;
+    width: 100%; }
+
 .container {
   margin: auto;
   max-width: 96rem; }

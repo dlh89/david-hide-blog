@@ -18,7 +18,15 @@
             <li class="nav__item"><a href="<?php echo site_url('/blog') ?>" class="nav__link <?php if (is_home() || is_singular('post')) echo 'nav__link--active' ?>">Blog</a></li>
             <li class="nav__item"><a href="<?php echo site_url('/about') ?>" class="nav__link <?php if (is_page('about')) echo 'nav__link--active' ?>">About</a></li>
             <li class="nav__item"><a href="<?php echo site_url('/contact') ?>" class="nav__link <?php if (is_page('contact')) echo 'nav__link--active' ?>">Contact</a></li>
+            <li class="nav__item"><a href="#" class="nav__link" id="searchButton">Search</a></li>
           </div>
         </ul>
       </nav>
+      <div class="search">
+        <div class="search__top">
+          <div class="container">
+            <input type="text" class="search__input" placeholder="Enter a search term">
+          </div>
+        </div>
+      </div>
     </main>
