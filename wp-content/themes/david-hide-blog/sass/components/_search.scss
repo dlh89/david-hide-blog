@@ -13,4 +13,20 @@
     padding: 1rem;
     width: 100%;
   }
+
+  &__results {
+    min-height: 15rem;
+    position: absolute;
+    width: 100%;
+    z-index: 99;
+  }
+
+  &__item {
+    background-color: $color-white;
+    list-style: none;
+    padding: 1rem;
+  }
+
+  &__link {
+  }
 }

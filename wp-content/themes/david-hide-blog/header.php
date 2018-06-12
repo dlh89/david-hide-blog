@@ -23,10 +23,11 @@
         </ul>
       </nav>
       <div class="search">
-        <div class="search__top">
-          <div class="container">
-            <input type="text" class="search__input" placeholder="Enter a search term">
+        <div class="container">
+          <div class="search__top">
+            <input type="text" class="search__input" placeholder="Enter a search term" aria-hidden="true">
           </div>
+          <div class="search__results"></div>
         </div>
       </div>
     </main>

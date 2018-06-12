@@ -1,21 +1,71 @@
 export default class Search {
   constructor() {
-    console.log('hello from search');
     this.searchButton = document.querySelector('#searchButton');
-    // this.search = document.querySelector('.search');
+    this.searchInput = document.querySelector('.search__input');
+    this.search = document.querySelector('.search');
+    this.searchActive = false;
+    this.typingTimer;
+    this.resultsDiv = document.querySelector('.search__results');
+    this.spinnerVisible = false;
+    this.previousValue;
     this.events();
   }
   events() {
-    this.searchButton.addEventListener('click', this.activateSearch);
+    this.searchButton.addEventListener('click', this.activateSearch.bind(this));
+    this.searchInput.addEventListener('keyup', this.typingLogic.bind(this));
   }
-  activateSearch() {
-    console.log(this.search);
-    const search = document.querySelector('.search');
-    search.classList.toggle('search--active');
-    if (!search.style.maxHeight) {
-      search.style.maxHeight = `${search.scrollHeight}px`;
+  typingLogic(e) {
+    if (this.searchInput.value !== this.previousValue) {
+      clearTimeout(this.typingTimer);
+
+      if (this.searchInput.value) {
+        if (!this.spinnerVisible) {
+          this.resultsDiv.innerHTML = '<div class="u-spinner"></div>';
+          this.spinnerVisible = true;
+        }
+        this.typingTimer = setTimeout(this.getResults.bind(this), 1000);
+        this.previousValue = this.searchInput.value;
+      } else {
+        this.resultsDiv.innerHTML = '';
+        this.spinnerVisible = false;
+      }
+    }
+  }
+  getResults() {
+    // Make the AJAX request to WordPress API
+    const xhr = new XMLHttpRequest();
+    const url = `http://localhost:3000/david-hide-blog/wp-json/wp/v2/posts?search=${
+      this.searchInput.value
+    }`;
+    xhr.open('GET', url, true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.onreadystatechange = () => {
+      if (xhr.readyState === 4 && xhr.status === 200) {
+        const results = JSON.parse(xhr.responseText);
+        console.log(results);
+        this.resultsDiv.innerHTML = '';
+        this.spinnerVisible = false;
+        results.forEach((post) => {
+          this.resultsDiv.innerHTML += `<li class="search__item"><a href="${
+            post.link
+          }" class="search__link">${post.title.rendered}</a></li>`;
+        });
+      }
+    };
+    xhr.send();
+  }
+  activateSearch(e) {
+    e.preventDefault();
+    this.searchButton.classList.toggle('nav__link--active');
+    this.search.classList.toggle('search--active');
+    if (!this.search.style.maxHeight) {
+      this.search.style.maxHeight = `${this.search.scrollHeight}px`;
+      this.searchInput.setAttribute('aria-hidden', false);
+      this.searchActive = true;
     } else {
-      search.style.maxHeight = null;
+      this.search.style.maxHeight = null;
+      this.searchInput.setAttribute('aria-hidden', true);
+      this.searchActive = false;
     }
   }
 }

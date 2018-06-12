@@ -78,6 +78,34 @@ body {
     .u-hr {
       background-color: #cccccc; } }
 
+.u-spinner {
+  -webkit-animation: spin 1s linear infinite;
+          animation: spin 1s linear infinite;
+  border: 0.5rem solid #cccccc;
+  border-top-color: #3799ff;
+  border-radius: 50%;
+  height: 54px;
+  width: 54px;
+  position: absolute;
+  top: 50%;
+  left: 50%; }
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0);
+            transform: translate(-50%, -50%) rotate(0); }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+            transform: translate(-50%, -50%) rotate(360deg); } }
+
+@keyframes spin {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0);
+            transform: translate(-50%, -50%) rotate(0); }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+            transform: translate(-50%, -50%) rotate(360deg); } }
+
 .banner {
   background-color: #3799ff;
   background-image: linear-gradient(to top, #3799ff, #0066d0);
@@ -192,10 +220,20 @@ body {
     font-size: inherit;
     padding: 1rem;
     width: 100%; }
+  .search__results {
+    min-height: 15rem;
+    position: absolute;
+    width: 100%;
+    z-index: 99; }
+  .search__item {
+    background-color: #fff;
+    list-style: none;
+    padding: 1rem; }
 
 .container {
   margin: auto;
-  max-width: 96rem; }
+  max-width: 96rem;
+  position: relative; }
   @media (max-width: 75em) {
     .container {
       margin: 0 3.2rem;
