@@ -34,9 +34,7 @@ export default class Search {
   getResults() {
     // Make the AJAX request to WordPress API
     const xhr = new XMLHttpRequest();
-    const url = `http://localhost:3000/david-hide-blog/wp-json/wp/v2/posts?search=${
-      this.searchInput.value
-    }`;
+    const url = `${blogData.root_url}/wp-json/wp/v2/posts?search=${this.searchInput.value}`;
     xhr.open('GET', url, true);
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.onreadystatechange = () => {
@@ -45,11 +43,17 @@ export default class Search {
         console.log(results);
         this.resultsDiv.innerHTML = '';
         this.spinnerVisible = false;
-        results.forEach((post) => {
-          this.resultsDiv.innerHTML += `<li class="search__item"><a href="${
-            post.link
-          }" class="search__link">${post.title.rendered}</a></li>`;
-        });
+        if (results.length) {
+          this.resultsDiv.innerHTML = `
+          <ul>
+            ${results
+    .map(post =>
+      `<li class="search__item"><a href="${post.link}">${post.title.rendered}</a></li>`)
+    .join('')}
+          </ul>`;
+        } else {
+          this.resultsDiv.innerHTML = '<li class="search__item">No results found</li>';
+        }
       }
     };
     xhr.send();
