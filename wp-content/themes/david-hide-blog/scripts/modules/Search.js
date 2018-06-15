@@ -32,31 +32,63 @@ export default class Search {
     }
   }
   getResults() {
-    // Make the AJAX request to WordPress API
-    const xhr = new XMLHttpRequest();
-    const url = `${blogData.root_url}/wp-json/wp/v2/posts?search=${this.searchInput.value}`;
-    xhr.open('GET', url, true);
-    xhr.setRequestHeader('Content-Type', 'application/json');
-    xhr.onreadystatechange = () => {
-      if (xhr.readyState === 4 && xhr.status === 200) {
-        const results = JSON.parse(xhr.responseText);
-        console.log(results);
-        this.resultsDiv.innerHTML = '';
-        this.spinnerVisible = false;
-        if (results.length) {
-          this.resultsDiv.innerHTML = `
-          <ul>
-            ${results
+    const asyncResults = async () => {
+      const postsResults = this.ajaxApiSearch('posts');
+      const pagesResults = this.ajaxApiSearch('pages');
+      const projectsResults = this.ajaxApiSearch('projects');
+      try {
+        const [posts, pages, projects] = await Promise.all([
+          postsResults,
+          pagesResults,
+          projectsResults,
+        ]);
+        const combinedResults = posts.concat(pages, projects);
+        this.updateResultsDivSuccess(combinedResults);
+      } catch (err) {
+        this.updateResultsDivFailure();
+      }
+    };
+    asyncResults();
+  }
+  ajaxApiSearch(category) {
+    return new Promise((resolve, reject) => {
+      // Make the AJAX request to WordPress API
+      const xhr = new XMLHttpRequest();
+      const url = `${blogData.root_url}/wp-json/wp/v2/${category}?search=${this.searchInput.value}`;
+      xhr.open('GET', url, true);
+      xhr.setRequestHeader('Content-Type', 'application/json');
+      xhr.onreadystatechange = () => {
+        if (xhr.readyState === 4) {
+          if (xhr.status === 200) {
+            const results = JSON.parse(xhr.responseText);
+            console.log(results);
+            this.resultsDiv.innerHTML = '';
+            this.spinnerVisible = false;
+            resolve(results);
+          } else {
+            reject();
+          }
+        }
+      };
+      xhr.send();
+    });
+  }
+  updateResultsDivSuccess(results) {
+    if (results.length) {
+      this.resultsDiv.innerHTML = `
+      <ul>
+        ${results
     .map(post =>
       `<li class="search__item"><a href="${post.link}">${post.title.rendered}</a></li>`)
     .join('')}
-          </ul>`;
-        } else {
-          this.resultsDiv.innerHTML = '<li class="search__item">No results found</li>';
-        }
-      }
-    };
-    xhr.send();
+      </ul>`;
+    } else {
+      this.resultsDiv.innerHTML = '<li class="search__item">No results found</li>';
+    }
+  }
+  updateResultsDivFailure() {
+    this.resultsDiv.innerHTML =
+      '<li class="search__item">There was an error retrieving search data.</li>';
   }
   activateSearch(e) {
     e.preventDefault();
