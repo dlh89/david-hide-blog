@@ -2,6 +2,11 @@
   &__container {
     margin: auto;
     max-width: 96rem;
+    position: relative;
+
+    @include respond(tab-port) {
+      max-width: 75%;
+    }
   }
 
   &__toggle-button {
@@ -86,17 +91,44 @@
     float: left;
     text-align: center;
 
+    &--search {
+      position: absolute;
+      right: 0;
+
+      @include respond(tab-port) {
+        position: relative;
+        right: auto;
+      }
+    }
+
     @include respond(tab-port) {
       float: none;
+    }
+  }
+
+  &__search-button {
+    display: block;
+    color: $color-white;
+    font-size: 1.8rem;
+    min-width: 4rem;
+    padding: 1.2rem 2rem;
+    letter-spacing: 0.2rem;
+    position: relative;
+    text-decoration: none;
+    transition: background-color 0.2s;
+
+    &:hover,
+    &--active {
+      background-color: $color-primary;
     }
   }
 
   &__link {
     display: block;
     color: $color-white;
-    min-width: 16rem;
+    font-size: 1.6rem;
+    min-width: 14rem;
     padding: 1.2rem 2rem;
-    font-size: 1.8rem;
     letter-spacing: 0.2rem;
     position: relative;
     text-decoration: none;

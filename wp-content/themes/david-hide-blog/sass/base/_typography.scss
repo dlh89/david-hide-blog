@@ -22,3 +22,11 @@ body {
     font-weight: 300;
   }
 }
+
+.link {
+  color: $color-primary;
+
+  &:visited {
+    color: darken($color-primary, 25%);
+  }
+}

@@ -51,3 +51,23 @@
   height: 1px;
   margin: 3.4rem 0;
 }
+.u-spinner {
+  animation: spin 1s linear infinite;
+  border: 0.5rem solid $color-light-grey;
+  border-top-color: $color-primary;
+  border-radius: 50%;
+  height: 54px;
+  width: 54px;
+  // centre
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}

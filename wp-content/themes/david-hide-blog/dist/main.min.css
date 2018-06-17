@@ -41,6 +41,11 @@ body {
   font-size: 2.2rem;
   font-weight: 300; }
 
+.link {
+  color: #3799ff; }
+  .link:visited {
+    color: #0059b7; }
+
 .u-padding-bottom-large {
   padding-bottom: 8rem; }
 
@@ -78,6 +83,34 @@ body {
     .u-hr {
       background-color: #cccccc; } }
 
+.u-spinner {
+  -webkit-animation: spin 1s linear infinite;
+          animation: spin 1s linear infinite;
+  border: 0.5rem solid #cccccc;
+  border-top-color: #3799ff;
+  border-radius: 50%;
+  height: 54px;
+  width: 54px;
+  position: absolute;
+  top: 50%;
+  left: 50%; }
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0);
+            transform: translate(-50%, -50%) rotate(0); }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+            transform: translate(-50%, -50%) rotate(360deg); } }
+
+@keyframes spin {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0);
+            transform: translate(-50%, -50%) rotate(0); }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+            transform: translate(-50%, -50%) rotate(360deg); } }
+
 .banner {
   background-color: #3799ff;
   background-image: linear-gradient(to top, #3799ff, #0066d0);
@@ -101,9 +134,6 @@ body {
   .btn:hover {
     background-color: #047fff; }
 
-.link {
-  color: inherit; }
-
 .footer {
   background-color: #333;
   color: #cccccc;
@@ -118,6 +148,17 @@ body {
   .footer__heading {
     font-size: 1.8rem;
     font-weight: 800; }
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor; }
+  .icon--search {
+    -webkit-transform: translateY(10%);
+            transform: translateY(10%); }
 
 .post__title {
   margin-bottom: 1rem; }
@@ -181,9 +222,48 @@ body {
 .technologies__item {
   font-size: 1.4rem; }
 
+.search {
+  background-color: #333;
+  max-height: 0;
+  opacity: 0; }
+  .search--active {
+    display: block;
+    opacity: 1; }
+  .search__input {
+    background-color: #fff;
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    margin: 1rem 0;
+    padding: 1rem;
+    width: 100%; }
+  .search__results {
+    min-height: 15rem;
+    position: absolute;
+    width: 100%;
+    z-index: 99; }
+  .search__item {
+    background-color: #fff;
+    border-bottom: 1px solid #cccccc;
+    border-left: 1px solid #cccccc;
+    border-right: 1px solid #cccccc;
+    list-style: none;
+    padding: 1rem; }
+  .search__link {
+    color: #3799ff;
+    text-decoration: none;
+    font-weight: 600; }
+    .search__link:visited {
+      color: #0059b7; }
+  .search__category {
+    color: #cccccc;
+    font-weight: 300;
+    text-transform: uppercase; }
+
 .container {
   margin: auto;
-  max-width: 96rem; }
+  max-width: 96rem;
+  position: relative; }
   @media (max-width: 75em) {
     .container {
       margin: 0 3.2rem;
@@ -223,7 +303,11 @@ body {
 
 .nav__container {
   margin: auto;
-  max-width: 96rem; }
+  max-width: 96rem;
+  position: relative; }
+  @media (max-width: 56.25em) {
+    .nav__container {
+      max-width: 75%; } }
 
 .nav__toggle-button {
   background-color: transparent;
@@ -294,16 +378,36 @@ body {
 .nav__item {
   float: left;
   text-align: center; }
+  .nav__item--search {
+    position: absolute;
+    right: 0; }
+    @media (max-width: 56.25em) {
+      .nav__item--search {
+        position: relative;
+        right: auto; } }
   @media (max-width: 56.25em) {
     .nav__item {
       float: none; } }
 
+.nav__search-button {
+  display: block;
+  color: #fff;
+  font-size: 1.8rem;
+  min-width: 4rem;
+  padding: 1.2rem 2rem;
+  letter-spacing: 0.2rem;
+  position: relative;
+  text-decoration: none;
+  transition: background-color 0.2s; }
+  .nav__search-button:hover, .nav__search-button--active {
+    background-color: #3799ff; }
+
 .nav__link {
   display: block;
   color: #fff;
-  min-width: 16rem;
+  font-size: 1.6rem;
+  min-width: 14rem;
   padding: 1.2rem 2rem;
-  font-size: 1.8rem;
   letter-spacing: 0.2rem;
   position: relative;
   text-decoration: none;
