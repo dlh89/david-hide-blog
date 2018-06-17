@@ -9,7 +9,6 @@ export default class Navigation {
     this.toggleBtn.addEventListener('click', this.toggleNav.bind(this));
   }
   toggleNav() {
-    this.navbarActive = true;
     this.burger.classList.toggle('nav__burger--active');
     this.toggleBtn.classList.toggle('nav__toggle-button--active');
 

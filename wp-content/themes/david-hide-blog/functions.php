@@ -1,4 +1,7 @@
 <?php
+
+require get_theme_file_path('/inc/search-route.php');
+
 function blog_files() {
   wp_enqueue_style( 'site_main_css', get_template_directory_uri() . '/dist/main.min.css' );
   wp_enqueue_script( 'site_main_js', get_template_directory_uri() . '/dist/app.bundle.js' , null , microtime() , true ); // TODO: Remove microtime from version in production as it prevents caching

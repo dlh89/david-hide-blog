@@ -8,7 +8,9 @@
   },
   "author": "David Hide",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "svgxuse": "^1.2.6"
+  },
   "devDependencies": {
     "autoprefixer": "^8.5.2",
     "babel-cli": "^6.26.0",

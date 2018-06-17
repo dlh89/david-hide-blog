@@ -30,38 +30,22 @@ export default class Search {
         this.spinnerVisible = false;
       }
     }
+    // close search if esc pressed
+    if (e.keyCode === 27) {
+      this.closeSearch();
+    }
   }
   getResults() {
-    const asyncResults = async () => {
-      const postsResults = this.ajaxApiSearch('posts');
-      const pagesResults = this.ajaxApiSearch('pages');
-      const projectsResults = this.ajaxApiSearch('projects');
-      try {
-        const [posts, pages, projects] = await Promise.all([
-          postsResults,
-          pagesResults,
-          projectsResults,
-        ]);
-        const combinedResults = posts.concat(pages, projects);
-        this.updateResultsDivSuccess(combinedResults);
-      } catch (err) {
-        this.updateResultsDivFailure();
-      }
-    };
-    asyncResults();
-  }
-  ajaxApiSearch(category) {
     return new Promise((resolve, reject) => {
       // Make the AJAX request to WordPress API
       const xhr = new XMLHttpRequest();
-      const url = `${blogData.root_url}/wp-json/wp/v2/${category}?search=${this.searchInput.value}`;
+      const url = `${blogData.root_url}/wp-json/dh/v1/search?term=${this.searchInput.value}`;
       xhr.open('GET', url, true);
       xhr.setRequestHeader('Content-Type', 'application/json');
       xhr.onreadystatechange = () => {
         if (xhr.readyState === 4) {
           if (xhr.status === 200) {
             const results = JSON.parse(xhr.responseText);
-            console.log(results);
             this.resultsDiv.innerHTML = '';
             this.spinnerVisible = false;
             resolve(results);
@@ -71,19 +55,23 @@ export default class Search {
         }
       };
       xhr.send();
-    });
+    }).then(this.updateResultsDivSuccess.bind(this), this.updateResultsDivFailure.bind(this));
   }
   updateResultsDivSuccess(results) {
-    if (results.length) {
-      this.resultsDiv.innerHTML = `
-      <ul>
-        ${results
+    if (this.searchInput.value) {
+      if (results.length) {
+        this.resultsDiv.innerHTML = `
+        <ul>
+          ${results
     .map(post =>
-      `<li class="search__item"><a href="${post.link}">${post.title.rendered}</a></li>`)
+      `<a href="${post.link}" class="search__link"><li class="search__item">${
+        post.title
+      } <span class="search__category">${post.type}</span></li></a>`)
     .join('')}
-      </ul>`;
-    } else {
-      this.resultsDiv.innerHTML = '<li class="search__item">No results found</li>';
+        </ul>`;
+      } else {
+        this.resultsDiv.innerHTML = '<li class="search__item">No results found</li>';
+      }
     }
   }
   updateResultsDivFailure() {
@@ -92,16 +80,24 @@ export default class Search {
   }
   activateSearch(e) {
     e.preventDefault();
-    this.searchButton.classList.toggle('nav__link--active');
+    this.searchButton.classList.toggle('nav__search-button--active');
     this.search.classList.toggle('search--active');
     if (!this.search.style.maxHeight) {
       this.search.style.maxHeight = `${this.search.scrollHeight}px`;
       this.searchInput.setAttribute('aria-hidden', false);
+      this.searchInput.focus();
       this.searchActive = true;
     } else {
-      this.search.style.maxHeight = null;
-      this.searchInput.setAttribute('aria-hidden', true);
-      this.searchActive = false;
+      this.closeSearch();
     }
+  }
+  closeSearch() {
+    this.search.style.maxHeight = null;
+    this.searchInput.setAttribute('aria-hidden', true);
+    this.resultsDiv.innerHTML = '';
+    this.searchActive = false;
+    this.searchInput.value = '';
+    this.searchButton.classList.remove('nav__search-button--active');
+    this.search.classList.remove('search--active');
   }
 }

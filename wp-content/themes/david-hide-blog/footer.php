@@ -31,6 +31,7 @@
       </div>
     </div>
   </footer>
-  <?php wp_footer(); ?>  
+  <?php wp_footer(); ?>
+  <script src="svgxuse.js" defer></script>  
   </body>
 </html>

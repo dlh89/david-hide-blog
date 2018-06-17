@@ -1,15 +1,19 @@
 .search {
   background-color: $color-dark-grey;
   max-height: 0;
-  transition: max-height 0.2s ease;
+  opacity: 0;
 
   &--active {
     display: block;
+    opacity: 1;
   }
 
   &__input {
+    background-color: $color-white;
+    border: none;
     font-family: inherit;
     font-size: inherit;
+    margin: 1rem 0;
     padding: 1rem;
     width: 100%;
   }
@@ -23,10 +27,27 @@
 
   &__item {
     background-color: $color-white;
+    border-bottom: 1px solid $color-light-grey;
+    border-left: 1px solid $color-light-grey;
+    border-right: 1px solid $color-light-grey;
     list-style: none;
     padding: 1rem;
   }
 
   &__link {
+    color: $color-primary;
+    text-decoration: none;
+    font-weight: 600;
+
+    &:visited {
+      color: darken($color-primary, 25%);
+    }
+  }
+
+  &__category {
+    color: $color-light-grey;
+    float: right;
+    font-weight: 300;
+    text-transform: uppercase;
   }
 }
