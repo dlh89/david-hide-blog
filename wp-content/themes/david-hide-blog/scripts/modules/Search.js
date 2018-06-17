@@ -64,7 +64,7 @@ export default class Search {
         <ul>
           ${results
     .map(post =>
-      `<a href="${post.link}" class="search__link"><li class="search__item">${
+      `<a href="${post.link}" class="search__link"><li class="search__item"><span>${
         post.title
       } <span class="search__category">${post.type}</span></li></a>`)
     .join('')}
@@ -92,10 +92,10 @@ export default class Search {
     }
   }
   closeSearch() {
+    this.searchActive = false;
     this.search.style.maxHeight = null;
     this.searchInput.setAttribute('aria-hidden', true);
     this.resultsDiv.innerHTML = '';
-    this.searchActive = false;
     this.searchInput.value = '';
     this.searchButton.classList.remove('nav__search-button--active');
     this.search.classList.remove('search--active');

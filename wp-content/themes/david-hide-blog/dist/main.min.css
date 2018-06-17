@@ -405,8 +405,8 @@ body {
 .nav__link {
   display: block;
   color: #fff;
-  font-size: 1.8rem;
-  min-width: 16rem;
+  font-size: 1.6rem;
+  min-width: 14rem;
   padding: 1.2rem 2rem;
   letter-spacing: 0.2rem;
   position: relative;

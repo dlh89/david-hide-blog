@@ -1,3 +1,5 @@
+import 'promise-polyfill/src/polyfill';
+
 import Navigation from './modules/Navigation';
 import Search from './modules/Search';
 

@@ -9,12 +9,14 @@
   "author": "David Hide",
   "license": "ISC",
   "dependencies": {
+    "promise-polyfill": "8.0.0",
     "svgxuse": "^1.2.6"
   },
   "devDependencies": {
     "autoprefixer": "^8.5.2",
     "babel-cli": "^6.26.0",
     "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
     "babel-preset-es2017": "^6.24.1",
     "browser-sync": "^2.24.4",
     "browser-sync-webpack-plugin": "^2.2.2",
