@@ -5,6 +5,8 @@
       'rewrite' => array('slug' => 'projects'),
       'has_archive' => true,
       'public' => true,
+      'show_in_rest' => true,
+      'rest_base' => 'projects',
       'labels' => array(
         'name' => 'Projects',
         'add_new_item' => 'Add New Project',
