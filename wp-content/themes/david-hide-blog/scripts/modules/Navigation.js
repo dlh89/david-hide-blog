@@ -1,9 +1,12 @@
+import Search from './Search';
+
 export default class Navigation {
   constructor() {
     this.toggleBtn = document.querySelector('.nav__toggle-button');
     this.burger = document.querySelector('.nav__burger');
     this.navList = document.querySelector('.nav__list');
     this.events();
+    this.search = new Search();
   }
   events() {
     this.toggleBtn.addEventListener('click', this.toggleNav.bind(this));
@@ -16,6 +19,7 @@ export default class Navigation {
       this.navList.style.maxHeight = `${this.navList.scrollHeight}px`;
     } else {
       this.navList.style.maxHeight = null;
+      this.search.closeSearch();
     }
   }
 }
