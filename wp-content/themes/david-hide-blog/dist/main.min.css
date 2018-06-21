@@ -222,14 +222,14 @@ body {
 .technologies__item {
   font-size: 1.4rem; }
 
-.search {
+.search-bar {
   background-color: #333;
   max-height: 0;
   opacity: 0; }
-  .search--active {
+  .search-bar--active {
     display: block;
     opacity: 1; }
-  .search__input {
+  .search-bar__input {
     background-color: #fff;
     border: none;
     font-family: inherit;
@@ -237,25 +237,37 @@ body {
     margin: 1rem 0;
     padding: 1rem;
     width: 100%; }
-  .search__results {
+    .search-bar__input--search-page {
+      border: 1px solid #cccccc;
+      width: 80%; }
+  .search-bar__button {
+    background-color: #3799ff;
+    border: 1px solid #3799ff;
+    color: #fff;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    margin: 1rem 0;
+    padding: 1rem 2.6rem; }
+  .search-bar__results {
     min-height: 15rem;
     position: absolute;
     width: 100%;
     z-index: 99; }
-  .search__item {
+  .search-bar__item {
     background-color: #fff;
     border-bottom: 1px solid #cccccc;
     border-left: 1px solid #cccccc;
     border-right: 1px solid #cccccc;
     list-style: none;
     padding: 1rem; }
-  .search__link {
+  .search-bar__link {
     color: #3799ff;
     text-decoration: none;
     font-weight: 600; }
-    .search__link:visited {
+    .search-bar__link:visited {
       color: #0059b7; }
-  .search__category {
+  .search-bar__category {
     color: #cccccc;
     font-weight: 300;
     text-transform: uppercase; }

@@ -1,4 +1,4 @@
-.search {
+.search-bar {
   background-color: $color-dark-grey;
   max-height: 0;
   opacity: 0;
@@ -16,6 +16,22 @@
     margin: 1rem 0;
     padding: 1rem;
     width: 100%;
+
+    &--search-page {
+      border: 1px solid $color-light-grey;
+      width: 80%;
+    }
+  }
+
+  &__button {
+    background-color: $color-primary;
+    border: 1px solid $color-primary;
+    color: $color-white;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    margin: 1rem 0;
+    padding: 1rem 2.6rem;
   }
 
   &__results {

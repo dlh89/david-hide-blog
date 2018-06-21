@@ -1,11 +1,11 @@
 export default class Search {
   constructor() {
     this.searchButton = document.querySelector('#searchButton');
-    this.searchInput = document.querySelector('.search__input');
-    this.search = document.querySelector('.search');
+    this.searchInput = document.querySelector('.search-bar__input');
+    this.search = document.querySelector('.search-bar');
     this.searchActive = false;
     this.typingTimer;
-    this.resultsDiv = document.querySelector('.search__results');
+    this.resultsDiv = document.querySelector('.search-bar__results');
     this.spinnerVisible = false;
     this.previousValue;
     this.events();
@@ -64,24 +64,26 @@ export default class Search {
         <ul>
           ${results
     .map(post =>
-      `<a href="${post.link}" class="search__link"><li class="search__item"><span>${
+      `<a href="${
+        post.link
+      }" class="search-bar__link"><li class="search-bar__item"><span>${
         post.title
-      } <span class="search__category">${post.type}</span></li></a>`)
+      } <span class="search-bar__category">${post.type}</span></li></a>`)
     .join('')}
         </ul>`;
       } else {
-        this.resultsDiv.innerHTML = '<li class="search__item">No results found</li>';
+        this.resultsDiv.innerHTML = '<li class="search-bar__item">No results found</li>';
       }
     }
   }
   updateResultsDivFailure() {
     this.resultsDiv.innerHTML =
-      '<li class="search__item">There was an error retrieving search data.</li>';
+      '<li class="search-bar__item">There was an error retrieving search data.</li>';
   }
   activateSearch(e) {
     e.preventDefault();
     this.searchButton.classList.toggle('nav__search-button--active');
-    this.search.classList.toggle('search--active');
+    this.search.classList.toggle('search-bar--active');
     if (!this.search.style.maxHeight) {
       this.search.style.maxHeight = `${this.search.scrollHeight}px`;
       this.searchInput.setAttribute('aria-hidden', false);
@@ -98,6 +100,6 @@ export default class Search {
     this.resultsDiv.innerHTML = '';
     this.searchInput.value = '';
     this.searchButton.classList.remove('nav__search-button--active');
-    this.search.classList.remove('search--active');
+    this.search.classList.remove('search-bar--active');
   }
 }

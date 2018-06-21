@@ -2,13 +2,13 @@
 <section class="banner banner--large">
   <div class="u-absolute-center"> 
     <h1 class="heading--primary">DavidHide.com</h1>
-    <h2 class="heading--sub">Web Developer</h2>
+    <h2 class="heading--sub">Front-End Web Development</h2>
   </div>
 </section>
 <section>
   <div class="container u-margin-top-large">
     <h2 class="heading--secondary">Recent Projects</h2>
-    <a href="<?php echo site_url('/projects') ?>" class="link">View all projects &#x2192;</a>    
+    <a href="<?php echo esc_url(site_url('/projects')); ?>" class="link">View all projects &#x2192;</a>    
     <div class="row">
       <?php
         $homepageProjects = new WP_Query(array(
@@ -35,7 +35,7 @@
     </div>
     <hr class="u-hr">
     <h2 class="heading--secondary">Recent Blog Posts</h2>
-    <a href="<?php echo site_url('/blog') ?>" class="link">View all posts &#x2192;</a>    
+    <a href="<?php echo esc_url(site_url('/blog')); ?>" class="link">View all posts &#x2192;</a>    
     <div class="row">
       <?php
         $homepagePosts = new WP_Query(array(

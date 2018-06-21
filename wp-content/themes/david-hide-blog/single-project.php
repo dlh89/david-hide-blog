@@ -3,7 +3,7 @@
   <div class="u-margin-top-large">
     <h2 class="post__title"><a href="<?php the_permalink(); ?>" class="post__link"><?php the_title(); ?></a></h2>
     <a href="<?php the_field('project_link') ?>" target="_blank"><?php the_field('project_link') ?></a>
-    <h3 class="post__date"><?php the_date(); ?></h3> <a href="<?php echo site_url() ?>" class="link">&#x2190; Back</a>
+    <h3 class="post__date"><?php the_date(); ?></h3> <a href="<?php echo esc_url(site_url()); ?>" class="link">&#x2190; Back</a>
   </div>
   <div class="project-panel row u-margin-top-medium">
     <div class="col-3-of-4 u-margin-top-small u-padding-bottom-small">

@@ -4,10 +4,10 @@
         <div>
           <ul class="footer__list">
           <h4 class="footer_heading">Navigate</h4>
-            <li><a href="<?php echo site_url() ?>" class="link">Home</a></li>          
-            <li><a href="<?php echo site_url('blog') ?>" class="link">Blog</a></li>
-            <li><a href="<?php echo site_url('about') ?>" class="link">About</a></li>
-            <li><a href="<?php echo site_url('contact') ?>" class="link">Contact</a></li>
+            <li><a href="<?php echo esc_url(site_url()); ?>" class="link">Home</a></li>          
+            <li><a href="<?php echo esc_url(site_url('blog')); ?>" class="link">Blog</a></li>
+            <li><a href="<?php echo esc_url(site_url('about')); ?>" class="link">About</a></li>
+            <li><a href="<?php echo esc_url(site_url('contact')); ?>" class="link">Contact</a></li>
           </ul>
         </div>
         <div>
