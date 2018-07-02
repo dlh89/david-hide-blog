@@ -87,6 +87,7 @@ export default class Search {
     if (!this.search.style.maxHeight) {
       this.search.style.maxHeight = `${this.search.scrollHeight}px`;
       this.searchInput.setAttribute('aria-hidden', false);
+      this.searchInput.setAttribute('tabindex', '0');
       this.searchInput.focus();
       this.searchActive = true;
     } else {
@@ -97,6 +98,7 @@ export default class Search {
     this.searchActive = false;
     this.search.style.maxHeight = null;
     this.searchInput.setAttribute('aria-hidden', true);
+    this.searchInput.setAttribute('tabindex', '-1');
     this.resultsDiv.innerHTML = '';
     this.searchInput.value = '';
     this.searchButton.classList.remove('nav__search-button--active');

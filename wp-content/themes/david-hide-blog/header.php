@@ -9,7 +9,7 @@
   </head>
   <body <?php body_class(); ?>>
     <main>
-      <nav class="nav">
+      <nav role="navigation" class="nav">
         <button class="nav__toggle-button"><div class="nav__burger"></div></button>        
         <ul class="nav__list">
           <div class="nav__container">
@@ -26,10 +26,10 @@
           </div>
         </ul>
       </nav>
-      <div class="search-bar">
+      <div class="search-bar" role="search">
         <div class="nav__container">
-          <input type="text" class="search-bar__input" placeholder="Enter a search term" aria-hidden="true">
-          <div class="search-bar__results"></div>
+          <input type="text" class="search-bar__input" placeholder="Enter a search term" aria-hidden="true" aria-label="Search through site content" tabindex="-1">
+          <div class="search-bar__results" aria-live="assertive"></div>
         </div>
       </div>
     </main>
