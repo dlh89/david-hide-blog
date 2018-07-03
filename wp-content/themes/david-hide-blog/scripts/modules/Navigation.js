@@ -6,23 +6,49 @@ export default class Navigation {
     this.burger = document.querySelector('.nav__burger');
     this.navList = document.querySelector('.nav__list');
     this.navLinks = document.querySelectorAll('.nav__link');
-    this.events();
+    this.tabPort = window.matchMedia('(max-width: 56.25em)');
     this.search = new Search();
+    this.navExpanded = false;
+    this.events();
   }
   events() {
     this.toggleBtn.addEventListener('click', this.toggleNav.bind(this));
+    this.tabPort.addListener(this.respondToMediaQuery(this.tabPort));
+    window.addEventListener('resize', () => this.respondToMediaQuery(this.tabPort));
+  }
+  respondToMediaQuery(query) {
+    if (query.matches) {
+      if (!this.navExpanded) {
+        this.closeNav();
+      } else {
+        this.openNav();
+      }
+    } else {
+      this.openNav();
+    }
   }
   toggleNav() {
-    this.burger.classList.toggle('nav__burger--active');
-    this.toggleBtn.classList.toggle('nav__toggle-button--active');
-
-    if (!this.navList.style.maxHeight) {
-      this.navList.style.maxHeight = `${this.navList.scrollHeight}px`;
-      this.navLinks.forEach(item => item.setAttribute('tabindex', '0'));
+    if (this.navList.style.maxHeight) {
+      this.navExpanded = false;
+      this.closeNav();
     } else {
-      this.navList.style.maxHeight = null;
-      this.navLinks.forEach(item => item.setAttribute('tabindex', '-1'));
-      this.search.closeSearch();
+      this.navExpanded = true;
+      this.openNav();
     }
+  }
+  openNav() {
+    this.navList.setAttribute('aria-hidden', 'false');
+    this.burger.classList.add('nav__burger--active');
+    this.toggleBtn.classList.add('nav__toggle-button--active');
+    this.navList.style.maxHeight = `${this.navList.scrollHeight}px`;
+    this.navLinks.forEach(item => item.setAttribute('tabindex', '0'));
+  }
+  closeNav() {
+    this.navList.setAttribute('aria-hidden', 'true');
+    this.burger.classList.remove('nav__burger--active');
+    this.toggleBtn.classList.remove('nav__toggle-button--active');
+    this.navList.style.maxHeight = null;
+    this.navLinks.forEach(item => item.setAttribute('tabindex', '-1'));
+    this.search.closeSearch();
   }
 }

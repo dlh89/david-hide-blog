@@ -19,7 +19,7 @@
             <li class="nav__item"><a href="<?php echo esc_url(site_url('/about')); ?>" class="nav__link <?php if (is_page('about')) echo 'nav__link--active' ?>">About</a></li>
             <li class="nav__item"><a href="<?php echo esc_url(site_url('/contact')); ?>" class="nav__link <?php if (is_page('contact')) echo 'nav__link--active' ?>">Contact</a></li>
             <li class="nav__item nav__item--search">
-              <a href="<?php echo esc_url(site_url('/search')); ?>" class="nav__search-button" id="searchButton">
+              <a href="<?php echo esc_url(site_url('/search')); ?>" class="nav__link nav__search-button" id="searchButton">
                 <svg class="icon icon--search"><use xlink:href="<?php echo get_template_directory_uri() ?>/dist/images/sprite.svg#icon-search"></use></svg>
               </a>
             </li>
