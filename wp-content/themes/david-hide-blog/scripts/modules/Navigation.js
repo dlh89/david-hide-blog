@@ -5,7 +5,10 @@ export default class Navigation {
     this.toggleBtn = document.querySelector('.nav__toggle-button');
     this.burger = document.querySelector('.nav__burger');
     this.navList = document.querySelector('.nav__list');
-    this.navLinks = document.querySelectorAll('.nav__link');
+    this.navLinks = [
+      ...document.querySelectorAll('.nav__link'),
+      document.querySelector('.nav__search-button'),
+    ]; // spread nodeList to array
     this.tabPort = window.matchMedia('(max-width: 56.25em)');
     this.search = new Search();
     this.navExpanded = false;
