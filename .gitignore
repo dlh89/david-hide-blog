@@ -1,6 +1,7 @@
 # Keep these files out of the repo
 node_modules
 readme.html
+local.php
 /wp-content/themes/twenty*
 /wp-content/upgrade
 /wp-content/uploads
