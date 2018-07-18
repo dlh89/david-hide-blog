@@ -19,9 +19,10 @@
         <div>
           <ul class="footer__list">
           <h4 class="footer_heading">Follow</h4>
-            <li><a href="https://twitter.com/undanator" target="_blank" class="link">Twitter</a></li>
-            <li><a href="https://github.com/dlh89" target="_blank" class="link">GitHub</a></li>
-            <li><a href="https://www.linkedin.com/in/david-hide-b2633b168/" target="_blank" className="link">LinkedIn</a></li>
+            <li><a href="https://github.com/dlh89" rel="noopener" target="_blank" class="link">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/david-hide-b2633b168/" rel="noopener" target="_blank" class="link">LinkedIn</a></li>
+            <li><a href="https://twitter.com/undanator" rel="noopener" target="_blank" class="link">Twitter</a></li>
+            <li><a href="https://codepen.io/dlh89/" rel="noopener" target="_blank" class="link">CodePen</a></li>
           </ul>
         </div>
       </div>

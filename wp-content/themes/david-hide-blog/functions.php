@@ -10,7 +10,6 @@ function blog_files() {
   } else {
     wp_enqueue_script( 'site_main_js', get_template_directory_uri() . '/dist/app.bundle.js' , null , 1.0, true ); // include a genuine version for production to enable caching
   }
-  wp_enqueue_script('svgxuse', get_template_directory_uri() . '/node_modules/svgxuse/svgxuse.js#asyncload');
   wp_enqueue_style('custom-google-fonts', '//fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i|Roboto:100,300,400,400i,700,700i');
   wp_localize_script('site_main_js', 'blogData', array(
     'root_url' => get_site_url()
