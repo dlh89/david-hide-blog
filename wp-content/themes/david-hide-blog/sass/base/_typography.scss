@@ -25,6 +25,7 @@ body {
 
 .link {
   color: $color-primary;
+  white-space: nowrap;
 
   &:visited {
     color: darken($color-primary, 25%);

@@ -42,7 +42,8 @@ body {
   font-weight: 300; }
 
 .link {
-  color: #3799ff; }
+  color: #3799ff;
+  white-space: nowrap; }
   .link:visited {
     color: #0059b7; }
 
