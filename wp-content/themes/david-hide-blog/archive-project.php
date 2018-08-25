@@ -19,7 +19,13 @@
               } else {
                 echo wp_trim_words(get_the_content(), 60); 
               }?> <a href="<?php the_permalink(); ?>" class="link">Continue reading &raquo;</a></p>
-          <hr class="u-hr">
+          <?php
+            // display a hr if if it isn't the last post
+            if ($wp_query->current_post != $wp_query->post_count-1) {
+              ?> <hr class="u-hr">
+            <?php 
+            } 
+          ?>
         </div>
       <?php }    
       echo paginate_links();
