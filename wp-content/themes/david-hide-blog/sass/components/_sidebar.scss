@@ -1,0 +1,34 @@
+.sidebar {
+  background-color: #fafafa;
+  padding: 1rem;
+
+  &__heading {
+    font-weight: 600;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  &__subheading {
+    font-weight: 300;
+    font-size: 1.8rem;
+    margin-bottom: .8rem;
+  }
+
+  &__link {
+    color: $color-primary;
+
+    &:visited {
+      color: darken($color-primary, 25%);
+    }
+  }
+
+  &__list {
+    list-style: none;
+    margin-bottom: 1rem;
+  }
+
+  @include respond(tab-land) {
+    margin-top: 4rem;
+  }
+}
+

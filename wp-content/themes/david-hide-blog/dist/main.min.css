@@ -161,6 +161,18 @@ body {
     -webkit-transform: translateY(10%);
             transform: translateY(10%); }
 
+.login {
+  background-color: #3799ff;
+  background-image: linear-gradient(#9dcdff, #d0e7ff); }
+  .login h1 a {
+    background-image: none; }
+
+#wp-submit {
+  background-color: #3799ff;
+  border: none;
+  box-shadow: none;
+  text-shadow: none; }
+
 .post__title {
   margin-bottom: 1rem; }
 
@@ -273,9 +285,31 @@ body {
     font-weight: 300;
     text-transform: uppercase; }
 
+.sidebar {
+  background-color: #fafafa;
+  padding: 1rem; }
+  .sidebar__heading {
+    font-weight: 600;
+    font-size: 2rem;
+    margin-bottom: 1rem; }
+  .sidebar__subheading {
+    font-weight: 300;
+    font-size: 1.8rem;
+    margin-bottom: .8rem; }
+  .sidebar__link {
+    color: #3799ff; }
+    .sidebar__link:visited {
+      color: #0059b7; }
+  .sidebar__list {
+    list-style: none;
+    margin-bottom: 1rem; }
+  @media (max-width: 75em) {
+    .sidebar {
+      margin-top: 4rem; } }
+
 .container {
   margin: auto;
-  max-width: 96rem;
+  max-width: 114rem;
   position: relative; }
   @media (max-width: 75em) {
     .container {
@@ -316,7 +350,7 @@ body {
 
 .nav__container {
   margin: auto;
-  max-width: 96rem;
+  max-width: 114rem;
   position: relative; }
   @media (max-width: 56.25em) {
     .nav__container {
