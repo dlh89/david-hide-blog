@@ -1,24 +1,12 @@
 
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
-  <if "%{HTTP_HOST} == 'localhost'">
-    # Development environment
-    RewriteEngine On
-    RewriteBase /david-hide-blog/
-    RewriteRule ^index\.php$ - [L]
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule . /david-hide-blog/index.php [L]
-  </if>
-  <if "%{HTTP_HOST} == 'davidhide.com'">
-    # Production environment
-    RewriteEngine On
-    RewriteBase /
-    RewriteRule ^index\.php$ - [L]
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule . /index.php [L]
-   </if>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
 </IfModule>
 
 # END WordPress
