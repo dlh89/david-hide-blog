@@ -2,7 +2,7 @@
 <section class="banner banner--large">
   <div class="u-absolute-center"> 
     <h1 class="heading--primary">DavidHide.com</h1>
-    <h2 class="heading--sub">Front-End Web Development</h2>
+    <h2 class="heading--sub">Full-Stack Web Development</h2>
   </div>
 </section>
 <section>
