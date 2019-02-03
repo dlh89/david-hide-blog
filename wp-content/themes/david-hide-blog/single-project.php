@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <div class="container">
-  <div class="u-margin-top-large">
+  <div class="u-margin-top-medium">
     <div class="row">
       <div class="col-2-of-3">
       <h2 class="post__title"><a href="<?php the_permalink(); ?>" class="post__link"><?php the_title(); ?></a></h2>
