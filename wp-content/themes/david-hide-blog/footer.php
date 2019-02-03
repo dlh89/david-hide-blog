@@ -13,7 +13,7 @@
         <div>
           <ul class="footer__list">
           <h4 class="footer_heading">Visit</h4>
-            <li><a href="http://www.davidhide.com" target="_blank" class="link">Web Portfolio</a></li>
+            <li><a href="https://www.portfolio.davidhide.com" target="_blank" class="link">Web Portfolio</a></li>
           </ul>
         </div>
         <div>
