@@ -28,7 +28,7 @@
       </div>
       <div class="u-margin-top-tiny">
         <hr class="u-hr">
-        <p class="u-margin-top-tiny">&#169;2018 David Hide</p>
+        <p class="u-margin-top-tiny">&#169;<?php echo date('Y'); ?> David Hide</p>
       </div>
     </div>
   </footer>
