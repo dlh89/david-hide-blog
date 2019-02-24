@@ -309,7 +309,7 @@ body {
 
 .container {
   margin: auto;
-  max-width: 114rem;
+  max-width: 96rem;
   position: relative; }
   @media (max-width: 75em) {
     .container {
@@ -350,7 +350,7 @@ body {
 
 .nav__container {
   margin: auto;
-  max-width: 114rem;
+  max-width: 96rem;
   position: relative; }
   @media (max-width: 56.25em) {
     .nav__container {
