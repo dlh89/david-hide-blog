@@ -184,7 +184,9 @@ body {
   text-decoration: none;
   text-transform: uppercase; }
   .post__link:hover > .post__thumbnail {
-    opacity: 1; }
+    opacity: 1;
+    -webkit-filter: saturate(1);
+            filter: saturate(1); }
   .post__link::after {
     background-color: #3799ff;
     bottom: -0.4rem;
@@ -208,16 +210,24 @@ body {
   margin-bottom: 1rem; }
 
 .post__thumbnail {
-  opacity: 0.8;
+  opacity: 0.9;
+  -webkit-filter: saturate(0.7);
+          filter: saturate(0.7);
   height: auto;
   max-width: 100%;
-  transition: opacity 0.2s ease-out;
+  transition: all 0.2s ease-out;
   width: auto; }
 
 .post__image {
   max-width: 100%;
   height: auto;
   width: auto; }
+
+@media (max-width: 75em) {
+  .post__thumbnail {
+    opacity: 1;
+    -webkit-filter: saturate(1);
+            filter: saturate(1); } }
 
 .project-panel {
   background-color: #333;
