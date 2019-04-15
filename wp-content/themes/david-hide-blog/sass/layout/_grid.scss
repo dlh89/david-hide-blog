@@ -34,11 +34,11 @@
   }
 
   .col-1-of-3 {
-    width: calc((100% - 2 * #{$gutter-vertical}) / 3);
+    width: calc((100% - #{$gutter-vertical}) / 3);
   }
 
   .col-2-of-3 {
-    width: calc((100% - 2 * #{$gutter-vertical}) / 3 * 2);
+    width: calc((100% - #{$gutter-vertical}) / 3 * 2);
   }
 
   .col-1-of-4 {
