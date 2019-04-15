@@ -1,3 +1,6 @@
+<?php
+if( !defined( 'ABSPATH' ) ) { exit; } ?>
+
 <div class="sidebar">
   <h3 class="sidebar__heading">Blog Archive</h3>
   <?php 
