@@ -12,8 +12,8 @@
     text-transform: uppercase;
 
     &:hover > .post__thumbnail {
-      opacity: 1;
-      filter: saturate(1);
+      opacity: 0.9;
+      filter: saturate(0.7);
     }
 
     &::after {
@@ -42,8 +42,8 @@
   }
 
   &__thumbnail {
-    opacity: 0.9;
-    filter: saturate(0.7);
+    opacity: 1;
+    filter: saturate(1);
     height: auto;
     max-width: 100%;
     transition: all 0.2s ease-out;
