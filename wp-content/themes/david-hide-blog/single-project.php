@@ -50,6 +50,18 @@
         <?php include 'partials/sidebar.php'; ?>
       </div>
     </div>
+    <div class="row container u-margin-top-large">
+      <h2 class="heading--secondary">Recent Projects</h2>
+      <?php
+        $homepagePosts = new WP_Query(array(
+          'posts_per_page' => 2,
+          'post_type' => 'project',
+          'post__not_in' => array($id)
+        ));
+
+        include(locate_template('partials/recent-posts.php'));
+      ?>
+    </div>
   </div>
 </div>
 <?php get_footer(); ?>
