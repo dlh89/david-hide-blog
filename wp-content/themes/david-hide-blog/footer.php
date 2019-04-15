@@ -1,7 +1,7 @@
   <footer class="footer">
     <div class="container">
       <div class="footer__container">
-        <div>
+        <div class="footer__column">
           <ul class="footer__list">
           <h4 class="footer_heading">Navigate</h4>
             <li><a href="<?php echo esc_url(site_url()); ?>" class="link">Home</a></li>          
@@ -10,13 +10,13 @@
             <li><a href="<?php echo esc_url(site_url('contact')); ?>" class="link">Contact</a></li>
           </ul>
         </div>
-        <div>
+        <div class="footer__column">
           <ul class="footer__list">
           <h4 class="footer_heading">Visit</h4>
             <li><a href="https://www.portfolio.davidhide.com" target="_blank" class="link">Web Portfolio</a></li>
           </ul>
         </div>
-        <div>
+        <div class="footer__column">
           <ul class="footer__list">
           <h4 class="footer_heading">Follow</h4>
             <li><a href="https://github.com/dlh89" rel="noopener" target="_blank" class="link">GitHub</a></li>

@@ -37,13 +37,12 @@
 .u-hr {
   @supports not (
     background-image:
-      linear-gradient(to right, transparent, $color-light-grey, transparent)
+      linear-gradient(to right, $color-light-grey, transparent)
   ) {
     background-color: $color-light-grey;
   }
   background-image: linear-gradient(
     to right,
-    transparent,
     $color-light-grey,
     transparent
   );

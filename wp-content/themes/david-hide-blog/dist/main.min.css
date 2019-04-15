@@ -76,11 +76,11 @@ body {
           transform: translate(-50%, -50%); }
 
 .u-hr {
-  background-image: linear-gradient(to right, transparent, #cccccc, transparent);
+  background-image: linear-gradient(to right, #cccccc, transparent);
   border: none;
   height: 1px;
   margin: 3.4rem 0; }
-  @supports not (background-image: linear-gradient(to right, transparent, #cccccc, transparent)) {
+  @supports not (background-image: linear-gradient(to right, #cccccc, transparent)) {
     .u-hr {
       background-color: #cccccc; } }
 
@@ -141,14 +141,20 @@ body {
   font-weight: 300;
   margin-top: 10rem;
   padding: 6rem 0; }
-  .footer__container {
-    display: flex;
-    justify-content: space-around; }
+  .footer__container::after {
+    content: "";
+    display: table;
+    clear: both; }
   .footer__list {
     list-style: none; }
   .footer__heading {
     font-size: 1.8rem;
     font-weight: 800; }
+  .footer__column {
+    float: left;
+    width: calc((100% - (4rem * 2)) / 3); }
+    .footer__column:not(:last-child) {
+      margin-right: 4rem; }
 
 .icon {
   display: inline-block;
