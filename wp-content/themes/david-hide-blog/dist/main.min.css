@@ -180,20 +180,16 @@ body {
   text-shadow: none; }
 
 .post__title {
-  margin-bottom: 1rem; }
-
-.post__link {
+  margin-bottom: 1rem;
   color: #333;
-  font-size: 2.4rem;
+  font-size: 3.2rem;
   font-weight: 600;
   position: relative;
-  text-decoration: none;
-  text-transform: uppercase; }
-  .post__link:hover > .post__thumbnail {
-    opacity: 0.9;
-    -webkit-filter: saturate(0.7);
-            filter: saturate(0.7); }
-  .post__link::after {
+  text-transform: uppercase;
+  line-height: 1.4; }
+  .post__title--headline {
+    font-size: 4.2rem; }
+  .post__title::after {
     background-color: #3799ff;
     bottom: -0.4rem;
     content: "";
@@ -206,7 +202,14 @@ body {
     transition: transform 0.2s;
     transition: transform 0.2s, -webkit-transform 0.2s;
     width: 100%; }
-  .post__link:hover::after {
+
+.post__link {
+  text-decoration: none; }
+  .post__link:hover > .post__thumbnail {
+    opacity: 0.9;
+    -webkit-filter: saturate(0.7);
+            filter: saturate(0.7); }
+  .post__link:hover .post__title::after {
     -webkit-transform: scaleX(1);
             transform: scaleX(1); }
 
@@ -306,22 +309,27 @@ body {
   padding: 1rem; }
   .sidebar__heading {
     font-weight: 600;
-    font-size: 2rem;
-    margin-bottom: 1rem; }
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase; }
   .sidebar__subheading {
     font-weight: 300;
     font-size: 1.8rem;
     margin-bottom: .8rem; }
+    .sidebar__subheading--year {
+      font-weight: 700; }
   .sidebar__link {
     color: #3799ff; }
     .sidebar__link:visited {
       color: #0059b7; }
   .sidebar__list {
     list-style: none;
-    margin-bottom: 1rem; }
-  @media (max-width: 75em) {
+    margin-bottom: 2rem; }
+    .sidebar__list > li {
+      margin-bottom: 1.2rem; }
+  @media (max-width: 56.25em) {
     .sidebar {
-      margin-top: 4rem; } }
+      display: none; } }
 
 .container {
   margin: auto;

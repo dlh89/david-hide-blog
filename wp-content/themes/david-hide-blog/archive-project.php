@@ -11,12 +11,12 @@
       while(have_posts()) {
         the_post(); ?>
         <div>
-          <h2 class="post__title">
-            <a href="<?php the_permalink(); ?>" class="post__link">
-              <?php echo get_the_post_thumbnail(get_the_id(), 'customThumbnail', array( 'class' => 'post__thumbnail' )); ?><br>
+          <a href="<?php the_permalink(); ?>" class="post__link">
+            <?php echo get_the_post_thumbnail(get_the_id(), 'customThumbnail', array( 'class' => 'post__thumbnail' )); ?><br>
+            <h2 class="post__title">
               <?php the_title(); ?>
-            </a>
-          </h2>
+            </h2>
+          </a>
           <a href="<?php the_field('project_link') ?>"><?php the_field('project_link') ?></a>
           <h3 class="post__date"><?php the_date(); ?></h3>
           <p><?php if (has_excerpt()) {
