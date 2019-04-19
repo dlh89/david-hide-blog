@@ -4,14 +4,19 @@
 
   &__heading {
     font-weight: 600;
-    font-size: 2rem;
+    font-size: 2.2rem;
     margin-bottom: 1rem;
+    text-transform: uppercase;
   }
 
   &__subheading {
     font-weight: 300;
     font-size: 1.8rem;
     margin-bottom: .8rem;
+
+    &--year {
+      font-weight: 700;
+    }
   }
 
   &__link {
@@ -24,11 +29,15 @@
 
   &__list {
     list-style: none;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
+
+    & > li {
+      margin-bottom: 1.2rem;
+    }
   }
 
-  @include respond(tab-land) {
-    margin-top: 4rem;
+  @include respond(tab-port) {
+    display: none;
   }
 }
 

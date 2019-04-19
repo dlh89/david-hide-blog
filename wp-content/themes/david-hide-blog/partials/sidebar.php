@@ -5,7 +5,7 @@ if( !defined( 'ABSPATH' ) ) { exit; } ?>
   <h3 class="sidebar__heading">Blog Archive</h3>
   <?php 
   $args = array(
-  'numberposts' => 5,
+  'numberposts' => 10,
   'category' => 0, 
   'orderby' => 'date',
   'order' => 'DESC', 
@@ -41,7 +41,7 @@ if( !defined( 'ABSPATH' ) ) { exit; } ?>
   }
 
   foreach ($post_months as $post_year => $post_month) {
-    echo '<h3 class="sidebar__subheading">' . $post_year . '</h3>';
+    echo '<h3 class="sidebar__subheading sidebar__subheading--year">' . $post_year . '</h3>';
     foreach ($post_month as $month => $month_post) {
       echo '<h3 class="sidebar__subheading">' . $month . '</h3>';
       echo '<div>';
@@ -95,7 +95,7 @@ if( !defined( 'ABSPATH' ) ) { exit; } ?>
   }
 
   foreach ($post_months as $post_year => $post_month) {
-    echo '<h3 class="sidebar__subheading">' . $post_year . '</h3>';
+    echo '<h3 class="sidebar__subheading sidebar__subheading--year">' . $post_year . '</h3>';
     foreach ($post_month as $month => $month_post) {
       echo '<h3 class="sidebar__subheading">' . $month . '</h3>';
       echo '<div>';

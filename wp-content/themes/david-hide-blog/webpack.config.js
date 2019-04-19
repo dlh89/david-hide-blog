@@ -44,7 +44,7 @@ module.exports = {
     new BrowserSyncPlugin({
       host: 'localhost',
       port: 3000,
-      proxy: 'http://localhost/david-hide-blog/',
+      proxy: 'http://davidhide.local/',
       files: ['*.php'],
     }),
   ],
