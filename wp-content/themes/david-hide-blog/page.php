@@ -8,7 +8,7 @@
             </section>
             <section class="section-main">
               <div class="container u-margin-top-large">
-              <?php the_content(); ?>
+                <?php the_content(); ?>
               </div>
             </section>
         <?php }

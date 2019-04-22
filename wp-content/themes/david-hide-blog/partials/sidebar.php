@@ -112,9 +112,29 @@ if( !defined( 'ABSPATH' ) ) { exit; } ?>
   ?>
   <h3 class="sidebar__heading">Follow</h3>
   <ul class="sidebar__list">
-    <li><a href="https://github.com/dlh89" rel="noopener" target="_blank" class="sidebar__link">GitHub</a></li>
-    <li><a href="https://www.linkedin.com/in/david-hide-b2633b168/" rel="noopener" target="_blank" class="sidebar__link">LinkedIn</a></li>
-    <li><a href="https://twitter.com/undanator" rel="noopener" target="_blank" class="sidebar__link">Twitter</a></li>
-    <li><a href="https://codepen.io/dlh89/" rel="noopener" target="_blank" class="sidebar__link">CodePen</a></li>
+    <li>
+      <a href="https://github.com/dlh89" rel="noopener" target="_blank" class="sidebar__link">
+        <svg class="icon"><use xlink:href="<?php echo get_template_directory_uri() ?>/dist/images/symbol-defs.svg#icon-github"></use></svg>
+        GitHub
+      </a>
+    </li>
+    <li>
+      <a href="https://www.linkedin.com/in/david-hide-b2633b168/" rel="noopener" target="_blank" class="sidebar__link">
+      <svg class="icon"><use xlink:href="<?php echo get_template_directory_uri() ?>/dist/images/symbol-defs.svg#icon-linkedin-square"></use></svg>
+      LinkedIn
+      </a>
+    </li>
+    <li>
+      <a href="https://twitter.com/undanator" rel="noopener" target="_blank" class="sidebar__link">
+        <svg class="icon"><use xlink:href="<?php echo get_template_directory_uri() ?>/dist/images/symbol-defs.svg#icon-twitter"></use></svg>
+        Twitter
+      </a>
+    </li>
+    <li>
+      <a href="https://codepen.io/dlh89/" rel="noopener" target="_blank" class="sidebar__link">
+        <svg class="icon"><use xlink:href="<?php echo get_template_directory_uri() ?>/dist/images/symbol-defs.svg#icon-codepen"></use></svg>
+        CodePen
+      </a>
+    </li>
   </ul>
 </div>
