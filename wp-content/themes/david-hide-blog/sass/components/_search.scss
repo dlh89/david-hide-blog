@@ -50,6 +50,11 @@
     padding: 1rem;
   }
 
+  &__link:hover &__item,
+  &__link:focus &__item {
+    background-color: darken($color-off-white, 5%);
+  }
+
   &__link {
     color: $color-primary;
     text-decoration: none;
