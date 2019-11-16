@@ -293,6 +293,9 @@ body {
     border-right: 1px solid #cccccc;
     list-style: none;
     padding: 1rem; }
+  .search-bar__link:hover .search-bar__item,
+  .search-bar__link:focus .search-bar__item {
+    background-color: #ededed; }
   .search-bar__link {
     color: #3799ff;
     text-decoration: none;
