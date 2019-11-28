@@ -8,6 +8,7 @@ local.php
 /sitemap.*
 /wp-config.php
 *.sql
+/.vscode
 
 # Hidden files
 *.DS_Store
