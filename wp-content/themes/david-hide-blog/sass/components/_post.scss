@@ -1,5 +1,6 @@
 .post {
   &__title {
+    display: inline-block;
     margin-bottom: 1rem;
     color: $color-dark-grey;
     font-size: 3.2rem;
@@ -26,6 +27,7 @@
   }
 
   &__link {
+    display: block;
     text-decoration: none;
 
     &:hover > .post__thumbnail {

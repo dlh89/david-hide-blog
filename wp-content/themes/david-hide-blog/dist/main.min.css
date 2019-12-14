@@ -182,6 +182,7 @@ body {
   text-shadow: none; }
 
 .post__title {
+  display: inline-block;
   margin-bottom: 1rem;
   color: #333;
   font-size: 3.2rem;
@@ -206,6 +207,7 @@ body {
     width: 100%; }
 
 .post__link {
+  display: block;
   text-decoration: none; }
   .post__link:hover > .post__thumbnail {
     opacity: 0.9;
