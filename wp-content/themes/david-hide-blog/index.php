@@ -29,7 +29,16 @@
           ?>
         </div>
       <?php }    
-      echo paginate_links();
+      $links = paginate_links(array(
+        'type' => 'array'
+      ));
+      if (!empty($links)) {
+        echo "<div class='pagination'>";
+        foreach ($links as $link) {
+          echo $link;
+        }
+        echo "</div>";
+      }
     ?>
   </div>
 </section>

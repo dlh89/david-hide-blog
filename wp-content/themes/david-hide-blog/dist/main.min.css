@@ -338,6 +338,23 @@ body {
     .sidebar {
       display: none; } }
 
+.pagination {
+  margin-top: 3.2rem;
+  font-size: 2rem; }
+
+.page-numbers {
+  padding: 6px 12px;
+  background-color: #3799ff;
+  color: #ffffff;
+  text-decoration: none; }
+
+.page-numbers:not(:last-child) {
+  margin-right: 5px; }
+
+.page-numbers.current {
+  background: transparent;
+  color: #333; }
+
 .container {
   margin: auto;
   max-width: 96rem;
