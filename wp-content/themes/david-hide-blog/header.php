@@ -17,7 +17,7 @@
     <?php
       $description = has_excerpt() ? get_the_excerpt() : 'Full-stack web development';
       if (get_the_post_thumbnail_url()) {
-        $featured_image = get_the_post_thumbnail_url();
+        $featured_image = get_the_post_thumbnail_url($post, 'large');
         $featured_image_alt = get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', true);
       } else {
         $featured_image = get_template_directory_uri() . '/dist/images/david-hide-logo-260x260.png';
