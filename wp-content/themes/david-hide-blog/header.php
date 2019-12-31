@@ -27,9 +27,11 @@
 
     <meta property="og:title" content="<?php echo get_the_title(); ?>">
     <meta property="og:description" content="<?php echo $description; ?>">
+    <meta property="twitter:description" content="<?php echo $description; ?>">
     <meta property="og:image" content="<?php echo $featured_image; ?>">
     <meta property="og:url" content="<?php echo get_permalink(); ?>">
-    <meta name="twitter:card" content="<?php echo $featured_image; ?>">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@undanator">
     <meta property="og:site_name" content="<?php echo get_bloginfo('name'); ?>">
     <meta name="twitter:image:alt" content="<?php echo $featured_image_alt; ?>">
 
