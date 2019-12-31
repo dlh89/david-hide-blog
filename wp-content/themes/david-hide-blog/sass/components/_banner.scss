@@ -12,6 +12,18 @@
   text-align: center;
 
   &--large {
-    min-height: 50vh;
+    height: 50vh;
+    min-height: 260px;
   }
+}
+
+.banner__text {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.banner__logo {
+  display: inline-block;
+  width: 100px;
+  margin-right: 10px;
 }

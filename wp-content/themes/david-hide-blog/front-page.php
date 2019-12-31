@@ -1,8 +1,11 @@
 <?php get_header(); ?>
 <section class="banner banner--large">
   <div class="u-absolute-center"> 
-    <h1 class="heading--primary">DavidHide.com</h1>
-    <h2 class="heading--sub">Full-Stack Web Development</h2>
+    <img class="banner__logo" src="<?php echo get_template_directory_uri() . '/dist/images/david-hide-logo-260x260.png'; ?>" alt="David Hide logo">
+    <div class="banner__text">
+      <h1 class="heading--primary">DavidHide.com</h1>
+      <h2 class="heading--sub">Full-Stack Web Development</h2>
+    </div>
   </div>
 </section>
 <section>
