@@ -182,9 +182,9 @@ eval("var g;\n\n// This works in non-strict mode\ng = (function() {\n\treturn th
   !*** ./sass/main.scss ***!
   \************************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./sass/main.scss?");
+eval("throw new Error(\"Module build failed: ModuleBuildError: Module build failed: Error: `sass-loader` requires `node-sass` >=4. Please install a compatible version.\\n    at Object.sassLoader (E:\\\\XAMPP\\\\htdocs\\\\david-hide-blog\\\\wp-content\\\\themes\\\\david-hide-blog\\\\node_modules\\\\sass-loader\\\\lib\\\\loader.js:31:19)\\n    at E:\\\\XAMPP\\\\htdocs\\\\david-hide-blog\\\\wp-content\\\\themes\\\\david-hide-blog\\\\node_modules\\\\webpack\\\\lib\\\\NormalModule.js:259:20\\n    at E:\\\\XAMPP\\\\htdocs\\\\david-hide-blog\\\\wp-content\\\\themes\\\\david-hide-blog\\\\node_modules\\\\loader-runner\\\\lib\\\\LoaderRunner.js:364:11\\n    at E:\\\\XAMPP\\\\htdocs\\\\david-hide-blog\\\\wp-content\\\\themes\\\\david-hide-blog\\\\node_modules\\\\loader-runner\\\\lib\\\\LoaderRunner.js:230:18\\n    at runSyncOrAsync (E:\\\\XAMPP\\\\htdocs\\\\david-hide-blog\\\\wp-content\\\\themes\\\\david-hide-blog\\\\node_modules\\\\loader-runner\\\\lib\\\\LoaderRunner.js:143:3)\\n    at iterateNormalLoaders (E:\\\\XAMPP\\\\htdocs\\\\david-hide-blog\\\\wp-content\\\\themes\\\\david-hide-blog\\\\node_modules\\\\loader-runner\\\\lib\\\\LoaderRunner.js:229:2)\\n    at Array.<anonymous> (E:\\\\XAMPP\\\\htdocs\\\\david-hide-blog\\\\wp-content\\\\themes\\\\david-hide-blog\\\\node_modules\\\\loader-runner\\\\lib\\\\LoaderRunner.js:202:4)\\n    at Storage.finished (E:\\\\XAMPP\\\\htdocs\\\\david-hide-blog\\\\wp-content\\\\themes\\\\david-hide-blog\\\\node_modules\\\\enhanced-resolve\\\\lib\\\\CachedInputFileSystem.js:43:16)\\n    at E:\\\\XAMPP\\\\htdocs\\\\david-hide-blog\\\\wp-content\\\\themes\\\\david-hide-blog\\\\node_modules\\\\enhanced-resolve\\\\lib\\\\CachedInputFileSystem.js:79:9\\n    at E:\\\\XAMPP\\\\htdocs\\\\david-hide-blog\\\\wp-content\\\\themes\\\\david-hide-blog\\\\node_modules\\\\graceful-fs\\\\graceful-fs.js:78:16\\n    at FSReqCallback.readFileAfterClose [as oncomplete] (internal/fs/read_file_context.js:63:3)\");\n\n//# sourceURL=webpack:///./sass/main.scss?");
 
 /***/ }),
 

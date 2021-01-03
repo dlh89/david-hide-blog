@@ -20,7 +20,7 @@
         $featured_image = get_the_post_thumbnail_url($post, 'large');
         $featured_image_alt = get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', true);
       } else {
-        $featured_image = get_template_directory_uri() . '/dist/images/david-hide-logo-260x260.png';
+        $featured_image = get_template_directory_uri() . '/dist/images/davidhide-logo.svg';
         $featured_image_alt = 'davidhide.com logo';
       }
     ?>
@@ -35,7 +35,12 @@
     <meta property="og:site_name" content="<?php echo get_bloginfo('name'); ?>">
     <meta name="twitter:image:alt" content="<?php echo $featured_image_alt; ?>">
 
-    <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_stylesheet_directory_uri(); ?>/dist/images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_stylesheet_directory_uri(); ?>/dist/images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_stylesheet_directory_uri(); ?>/dist/images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
 
     <?php wp_head(); ?>
   </head>
