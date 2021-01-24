@@ -64,6 +64,10 @@
   }
 }
 
+h1.post__title {
+  display: block;
+}
+
 @include respond(tab-land) {
   .post {
     &__thumbnail {
