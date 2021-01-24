@@ -125,12 +125,6 @@ if( !defined( 'ABSPATH' ) ) { exit; } ?>
       </a>
     </li>
     <li>
-      <a href="https://twitter.com/undanator" rel="noopener" target="_blank" class="sidebar__link">
-        <svg class="icon"><use xlink:href="<?php echo get_template_directory_uri() ?>/dist/images/symbol-defs.svg#icon-twitter"></use></svg>
-        Twitter
-      </a>
-    </li>
-    <li>
       <a href="https://codepen.io/dlh89/" rel="noopener" target="_blank" class="sidebar__link">
         <svg class="icon"><use xlink:href="<?php echo get_template_directory_uri() ?>/dist/images/symbol-defs.svg#icon-codepen"></use></svg>
         CodePen
