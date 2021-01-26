@@ -7,11 +7,11 @@ while($homepagePosts->have_posts()) {
     <div class="u-margin-top-small">
       <a href="<?php the_permalink(); ?>" class="post__link">
         <?php echo get_the_post_thumbnail(get_the_id(), 'customThumbnail', array( 'class' => 'post__thumbnail' )); ?><br>
-        <h2 class="post__title">
+        <h3 class="post__title">
           <?php the_title(); ?>
-        </h2>
+        </h3>
       </a>
-      <h3 class="post__date"><?php the_date(); ?></h3>
+      <p class="post__date"><?php the_date(); ?></p>
       <p><?php if (has_excerpt()) {
         echo get_the_excerpt();
       } else {
