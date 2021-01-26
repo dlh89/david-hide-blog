@@ -4,7 +4,7 @@
     <img class="banner__logo" src="<?php echo get_template_directory_uri() . '/dist/images/davidhide-logo.svg'; ?>" alt="David Hide logo">
     <div class="banner__text">
       <h1 class="heading--primary">DavidHide.com</h1>
-      <h2 class="heading--sub">Full-Stack Web Development</h2>
+      <p class="heading--sub">Full-Stack Web Development</p>
     </div>
   </div>
 </section>

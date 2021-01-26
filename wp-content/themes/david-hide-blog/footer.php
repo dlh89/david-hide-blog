@@ -3,7 +3,7 @@
       <div class="footer__container">
         <div class="footer__column">
           <ul class="footer__list">
-          <h4 class="footer_heading">Navigate</h4>
+          <p class="footer_heading">Navigate</p>
             <li><a href="<?php echo esc_url(site_url()); ?>" class="link">Home</a></li>          
             <li><a href="<?php echo esc_url(site_url('blog')); ?>" class="link">Blog</a></li>
             <li><a href="<?php echo esc_url(site_url('about')); ?>" class="link">About</a></li>
@@ -12,13 +12,13 @@
         </div>
         <div class="footer__column">
           <ul class="footer__list">
-          <h4 class="footer_heading">Visit</h4>
+          <p class="footer_heading">Visit</p>
             <li><a href="https://www.portfolio.davidhide.com" target="_blank" class="link">Web Portfolio</a></li>
           </ul>
         </div>
         <div class="footer__column">
           <ul class="footer__list">
-          <h4 class="footer_heading">Follow</h4>
+          <p class="footer_heading">Follow</p>
             <li>
               <a href="https://github.com/dlh89" rel="noopener" target="_blank" class="link">
                 <svg class="icon"><use xlink:href="<?php echo get_template_directory_uri() ?>/dist/images/symbol-defs.svg#icon-github"></use></svg>

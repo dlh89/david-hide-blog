@@ -10,7 +10,7 @@
                 $id = get_the_ID();
                 ?>
                 <h1 class="post__title post__title--headline"><?php the_title(); ?></h1>
-                <h3 class="post__date"><?php the_date(); ?></h3> <a href="<?php echo esc_url(site_url()); ?>" class="link">&#x2190; Back</a>
+                <p class="post__date"><?php the_date(); ?></p> <a href="<?php echo esc_url(site_url()); ?>" class="link">&#x2190; Back</a>
                 <div class="u-margin-top-small">
                   <?php echo get_the_post_thumbnail($id, 'medium_large', array( 'class' => 'post__image' )); ?>
                 </div>

@@ -5,7 +5,7 @@
       <div class="col-2-of-3">
       <h1 class="post__title post__title--headline"><?php the_title(); ?></h1>
         <a href="<?php the_field('project_link') ?>" target="_blank"><?php the_field('project_link') ?></a>
-        <h3 class="post__date"><?php the_date(); ?></h3> <a href="<?php echo esc_url(site_url()); ?>" class="link">&#x2190; Back</a>
+        <p class="post__date"><?php the_date(); ?></p> <a href="<?php echo esc_url(site_url()); ?>" class="link">&#x2190; Back</a>
         <div class="project-panel row u-margin-top-medium">
           <div class="col-2-of-3 u-margin-top-small u-padding-bottom-small">
               <h2 class="project-panel__title">What is it?</h2>

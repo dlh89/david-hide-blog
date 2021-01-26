@@ -2,7 +2,7 @@
 if( !defined( 'ABSPATH' ) ) { exit; } ?>
 
 <div class="sidebar">
-  <h3 class="sidebar__heading">Blog Archive</h3>
+  <p class="sidebar__heading">Blog Archive</p>
   <?php 
   $args = array(
   'numberposts' => 10,
@@ -41,9 +41,9 @@ if( !defined( 'ABSPATH' ) ) { exit; } ?>
   }
 
   foreach ($post_months as $post_year => $post_month) {
-    echo '<h3 class="sidebar__subheading sidebar__subheading--year">' . $post_year . '</h3>';
+    echo '<p class="sidebar__subheading sidebar__subheading--year">' . $post_year . '</p>';
     foreach ($post_month as $month => $month_post) {
-      echo '<h3 class="sidebar__subheading">' . $month . '</h3>';
+      echo '<p class="sidebar__subheading">' . $month . '</p>';
       echo '<div>';
       echo '<ul class="sidebar__list">';
       foreach ($month_post as $post => $post_meta) {
@@ -56,7 +56,7 @@ if( !defined( 'ABSPATH' ) ) { exit; } ?>
     }
   }
   ?>
-  <h3 class="sidebar__heading">Project Archive</h3>
+  <p class="sidebar__heading">Project Archive</p>
   <?php 
   $args = array(
   'numberposts' => 5,
@@ -95,9 +95,9 @@ if( !defined( 'ABSPATH' ) ) { exit; } ?>
   }
 
   foreach ($post_months as $post_year => $post_month) {
-    echo '<h3 class="sidebar__subheading sidebar__subheading--year">' . $post_year . '</h3>';
+    echo '<p class="sidebar__subheading sidebar__subheading--year">' . $post_year . '</p>';
     foreach ($post_month as $month => $month_post) {
-      echo '<h3 class="sidebar__subheading">' . $month . '</h3>';
+      echo '<p class="sidebar__subheading">' . $month . '</p>';
       echo '<div>';
       echo '<ul class="sidebar__list">';
       foreach ($month_post as $post => $post_meta) {
@@ -110,7 +110,7 @@ if( !defined( 'ABSPATH' ) ) { exit; } ?>
     }
   }
   ?>
-  <h3 class="sidebar__heading">Follow</h3>
+  <p class="sidebar__heading">Follow</p>
   <ul class="sidebar__list">
     <li>
       <a href="https://github.com/dlh89" rel="noopener" target="_blank" class="sidebar__link">

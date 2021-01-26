@@ -2,7 +2,7 @@
 <section class="banner">
 <div class="u-absolute-center"> 
     <h1 class="heading--primary">Projects</h1>
-    <h2 class="heading--sub">An archive of my projects</h2>
+    <p class="heading--sub">An archive of my projects</p>
   </div>
 </section>
 <section>
@@ -18,7 +18,7 @@
             </h2>
           </a>
           <a href="<?php the_field('project_link') ?>"><?php the_field('project_link') ?></a>
-          <h3 class="post__date"><?php the_date(); ?></h3>
+          <p class="post__date"><?php the_date(); ?></p>
           <p><?php if (has_excerpt()) {
                 echo get_the_excerpt();
               } else {
