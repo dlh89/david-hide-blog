@@ -19,7 +19,7 @@ class DavidHideBlog {
     {
         add_filter('clean_url', array($this, 'async_scripts'), 11, 1);
         add_action('after_setup_theme', array($this, 'blog_features'));
-        add_filter('login_headertitle', array($this, 'login_title'));
+        add_filter('login_headertext', array($this, 'login_title'));
 
         // Customise login screen
         add_filter('login_headerurl', array($this, 'header_url'));
