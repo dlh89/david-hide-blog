@@ -9,7 +9,7 @@
     "dbcache.configuration_overloaded": false,
     "dbcache.debug": false,
     "dbcache.debug_purge": false,
-    "dbcache.enabled": false,
+    "dbcache.enabled": true,
     "dbcache.engine": "file",
     "dbcache.file.gc": 3600,
     "dbcache.file.locking": false,
@@ -95,7 +95,7 @@
     "objectcache.debug_purge": false,
     "objectcache.enabled_for_wp_admin": false,
     "objectcache.fallback_transients": true,
-    "objectcache.engine": "file",
+    "objectcache.engine": "apc",
     "objectcache.file.gc": 3600,
     "objectcache.file.locking": false,
     "objectcache.memcached.servers": [
