@@ -9,6 +9,8 @@ local.php
 /wp-config.php
 *.sql
 /.vscode
+wp-content/cache
+
 
 # Hidden files
 *.DS_Store
