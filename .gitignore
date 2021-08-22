@@ -17,3 +17,7 @@ wp-content/cache
 *Thumbs.db
 *.sass-cache*
 *~imageoptim*
+
+
+# caching
+wp-content/wphb-cache/cache/davidhide.local/**
