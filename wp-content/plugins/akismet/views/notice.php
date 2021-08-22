@@ -1,5 +1,11 @@
+<?php
+
+//phpcs:disable VariableAnalysis
+// There are "undefined" variables here because they're defined in the code that includes this file as a template.
+
+?>
 <?php if ( $type == 'plugin' ) :?>
-<div class="updated" style="padding: 0; margin: 0; border: none; background: none;">
+<div class="updated" id="akismet_setup_prompt">
 	<form name="akismet_activate" action="<?php echo esc_url( Akismet_Admin::get_page_url() ); ?>" method="POST">
 		<div class="akismet_activate">
 			<div class="aa_a">A</div>
@@ -15,7 +21,7 @@
 <?php elseif ( $type == 'spam-check' ) :?>
 <div class="notice notice-warning">
 	<p><strong><?php esc_html_e( 'Akismet has detected a problem.', 'akismet' );?></strong></p>
-	<p><?php printf( __( 'Some comments have not yet been checked for spam by Akismet. They have been temporarily held for moderation and will automatically be rechecked later.', 'akismet' ) ); ?></p>
+	<p><?php esc_html_e( 'Some comments have not yet been checked for spam by Akismet. They have been temporarily held for moderation and will automatically be rechecked later.', 'akismet' ); ?></p>
 	<?php if ( $link_text ) { ?>
 		<p><?php echo $link_text; ?></p>
 	<?php } ?>
@@ -107,7 +113,8 @@
 </div>
 <?php elseif ( $type == 'existing-key-invalid' ) :?>
 <div class="akismet-alert akismet-critical">
-	<h3 class="akismet-key-status"><?php esc_html_e( 'Your API key is no longer valid. Please enter a new key or contact support@akismet.com.' , 'akismet'); ?></h3>
+	<h3 class="akismet-key-status"><?php echo esc_html( __( 'Your API key is no longer valid.' , 'akismet' ) ); ?></h3>
+	<p class="akismet-description"><?php printf( __( 'Please enter a new key or <a href="%s" target="_blank">contact Akismet support</a>.' , 'akismet' ), 'https://akismet.com/contact/' ); ?></p>
 </div>
 <?php elseif ( $type == 'new-key-failed' ) :?>
 <div class="akismet-alert akismet-critical">
@@ -117,14 +124,14 @@
 <?php elseif ( $type == 'limit-reached' && in_array( $level, array( 'yellow', 'red' ) ) ) :?>
 <div class="akismet-alert akismet-critical">
 	<?php if ( $level == 'yellow' ): ?>
-	<h3 class="akismet-key-status failed"><?php esc_html_e( 'You&#8217;re using your Akismet key on more sites than your Pro subscription allows.', 'akismet' ); ?></h3>
+	<h3 class="akismet-key-status failed"><?php esc_html_e( 'You&#8217;re using your Akismet key on more sites than your Plus subscription allows.', 'akismet' ); ?></h3>
 	<p class="akismet-description">
-		<?php printf( __( 'Your Pro subscription allows the use of Akismet on only one site. Please <a href="%s" target="_blank">purchase additional Pro subscriptions</a> or upgrade to an Enterprise subscription that allows the use of Akismet on unlimited sites.', 'akismet' ), 'https://docs.akismet.com/billing/add-more-sites/' ); ?>
+		<?php printf( __( 'Your Plus subscription allows the use of Akismet on only one site. Please <a href="%s" target="_blank">purchase additional Plus subscriptions</a> or upgrade to an Enterprise subscription that allows the use of Akismet on unlimited sites.', 'akismet' ), 'https://docs.akismet.com/billing/add-more-sites/' ); ?>
 		<br /><br />
 		<?php printf( __( 'Please <a href="%s" target="_blank">contact our support team</a> with any questions.', 'akismet' ), 'https://akismet.com/contact/'); ?>
 	</p>
 	<?php elseif ( $level == 'red' ): ?>
-	<h3 class="akismet-key-status failed"><?php esc_html_e( 'You&#8217;re using Akismet on far too many sites for your Pro subscription.', 'akismet' ); ?></h3>
+	<h3 class="akismet-key-status failed"><?php esc_html_e( 'You&#8217;re using Akismet on far too many sites for your Plus subscription.', 'akismet' ); ?></h3>
 	<p class="akismet-description">
 		<?php printf( __( 'To continue your service, <a href="%s" target="_blank">upgrade to an Enterprise subscription</a>, which covers an unlimited number of sites.', 'akismet'), 'https://akismet.com/account/upgrade/' ); ?>
 		<br /><br />
